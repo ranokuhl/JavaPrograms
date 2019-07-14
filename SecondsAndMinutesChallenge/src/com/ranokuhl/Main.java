@@ -2,6 +2,8 @@ package com.ranokuhl;
 
 public class Main {
 
+    public static final String INVALID_VALUE_MESSAGE = "Invalid value";
+
     public static void main(String[] args) {
 
         System.out.println(getDurationString(60, 15));
@@ -13,7 +15,7 @@ public class Main {
 
         if(minutes < 0 || (seconds < 0 || seconds > 59)){
 
-            return "Invalid value";
+            return INVALID_VALUE_MESSAGE;
 
         }
 
@@ -26,7 +28,7 @@ public class Main {
 
         if(seconds < 0){
 
-            return "Invalid value";
+            return INVALID_VALUE_MESSAGE;
 
         }
 
@@ -34,7 +36,6 @@ public class Main {
         long remainingSeconds = seconds % 60;
 
         return getDurationString(minutes, remainingSeconds);
-
 
     }
 
