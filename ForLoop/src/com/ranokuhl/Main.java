@@ -18,13 +18,40 @@ public class Main {
 
         }
 
+        System.out.println("===============================");
+
+        int count = 0;
+
+        for (int i = 25; i < 90; i++){
+            if (isPrime(i)){
+                count++;
+                System.out.println("Number " + i + " is a prime number.");
+
+                if (count == 3) {
+                    System.out.println("Exiting program after 3 prime numbers found.");
+                    break;
+                }
+            }
+        }
 
 
-        
 
 
+    }
 
+    public static boolean isPrime(int n){
 
+        if (n == 1) {
+            return false;
+        }
+
+        for (int i = 2;i <= n/2; i++) {
+            if(n % i == 0) {
+                return false;
+            }
+        }
+
+        return true;
     }
 
 
