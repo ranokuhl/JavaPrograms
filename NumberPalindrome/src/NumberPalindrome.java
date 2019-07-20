@@ -7,18 +7,20 @@ public class NumberPalindrome {
     public static boolean isPalindrome(int number){
 
         int reverse = 0;
-        int remaining = number;
+        int remainder = number;
         int lastDigit = 0;
 
-        while(remaining != 0){
-            lastDigit = remaining % 10;
+        while(remainder != 0){
+
+            lastDigit = remainder % 10;
             reverse *= 10;
             reverse += lastDigit;
-            remaining /= 10;
-
+            remainder /= 10;
         }
 
         return number == reverse;
+
+
 
     }
 
