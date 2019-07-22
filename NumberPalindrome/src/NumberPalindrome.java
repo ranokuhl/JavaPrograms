@@ -4,13 +4,13 @@ public class NumberPalindrome {
         System.out.println(isPalindrome(24542));
     }
 
-    public static boolean isPalindrome(int number){
+    public static boolean isPalindrome(int number) {
 
         int reverse = 0;
         int remainder = number;
         int lastDigit = 0;
 
-        while(remainder != 0){
+        while (0 != remainder) {
 
             lastDigit = remainder % 10;
             reverse *= 10;
@@ -19,7 +19,6 @@ public class NumberPalindrome {
         }
 
         return number == reverse;
-
 
 
     }
