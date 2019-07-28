@@ -28,7 +28,10 @@ public class FlourPacker {
             }
 
             if (sumCount >= goal){
-                if((thres))
+                if((thresholdBigCount % goal == 0)){
+                    return true;
+                }
+                if((thresholdSmallCount))
             }
 
             return false;
