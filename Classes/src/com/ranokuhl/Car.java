@@ -11,8 +11,16 @@ public class Car {
 
     public void setModel(String model){
 
-        this.model = model;
+        String validModel = model.toLowerCase();
 
+        if(validModel == "carrera" || validModel == "holden"){
+
+            this.model = model;
+
+        }else {
+
+            System.out.println("Unknown model");
+        }
     }
 
     public String getModel(){
