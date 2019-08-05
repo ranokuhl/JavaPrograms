@@ -8,13 +8,21 @@ public class Main {
                 // "(087) 123-456-789");
 
 
-        bobsAccount.withdrawal(100.0);
+        bobsAccount.withdrawal(10.0);
 
         bobsAccount.deposit(50.00);
         bobsAccount.withdrawal(100.0);
 
         bobsAccount.deposit(51.0);
         bobsAccount.withdrawal(100.0);
+
+        System.out.println("=============================");
+
+        VipCustomer myVip = new VipCustomer();
+        System.out.println(myVip.getCreditLimit());
+        System.out.println(myVip.getEmailAddress());
+        System.out.println(myVip.getName());
+
 
     }
 }
