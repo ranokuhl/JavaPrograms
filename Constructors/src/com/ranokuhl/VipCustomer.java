@@ -8,11 +8,15 @@ public class VipCustomer {
 
 
     public VipCustomer() {
+
         this("default name", 50000, "default@mail.com");
+
     }
 
     public VipCustomer(String name, double creditLimit) {
+
         this(name, creditLimit, "hoi@moi.com");
+
     }
 
     public VipCustomer(String name, double creditLimit, String emailAddress) {

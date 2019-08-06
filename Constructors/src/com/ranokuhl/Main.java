@@ -23,6 +23,6 @@ public class Main {
         System.out.println(myVip.getEmailAddress());
         System.out.println(myVip.getName());
 
-
+        System.out.println("=============================");
     }
 }
