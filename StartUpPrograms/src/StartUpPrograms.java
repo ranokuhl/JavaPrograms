@@ -4,27 +4,24 @@ import java.io.IOException;
 
 public class StartUpPrograms {
 
+    public static void main(String[] args) throws IOException {
 
-        public static void main(String[]args) throws IOException{
+        launch("NAME OF PROGRAM");
+    }
 
-                openPrograms(enter_pathname_here);
+    public static void launch(String pathName) throws IOException {
 
+        File file = new File;
 
-
+        if(!Desktop.isDesktopSupported()) {
+            System.out.println("Desktop is not supported.");
+            return;
+        } else {
+            Desktop desktop = Desktop.getDesktop();
+            if(file.exists()) {
+                desktop.open(file);
+            }
         }
 
-        public static void openPrograms(String pathName) throws IOException {
-
-                File file = new File(pathName);
-
-                if(!Desktop.isDesktopSupported()){
-                        System.out.println("Desktop is not supported");
-                        return;
-                }
-
-                Desktop desktop = Desktop.getDesktop();
-                if(file.exists()) desktop.open(file);
-
-        }
-
+    }
 }
