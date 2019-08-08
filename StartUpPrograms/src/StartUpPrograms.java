@@ -6,12 +6,13 @@ public class StartUpPrograms {
 
     public static void main(String[] args) throws IOException {
 
-        launch("NAME OF PROGRAM");
+        launch("PATH_NAME");
+
     }
 
     public static void launch(String pathName) throws IOException {
 
-        File file = new File;
+        File file = new File(pathName);
 
         if(!Desktop.isDesktopSupported()) {
             System.out.println("Desktop is not supported.");
