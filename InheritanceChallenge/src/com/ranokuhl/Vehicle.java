@@ -34,5 +34,15 @@ public class Vehicle {
         this.currentVelocity = 0;
     }
 
+    public int getCurrentVelocity() {
+        return currentVelocity;
+    }
+
+    public int getCurrentDirection() {
+        return currentDirection;
+    }
+
+
+
 
 }
