@@ -2,37 +2,56 @@ package com.ranokuhl;
 
 public class Printer {
 
-    private int tonerLevel = 0;
+    private int tonerLevel;
     private int numberOfPagesPrinted;
     private boolean duplexPrinter;
 
-    public Printer(int addTonerLevel, int numberOfPagesPrinted, boolean duplexPrinter) {
+    public Printer(int tonerLevel, boolean duplexPrinter) {
 
+        if (tonerLevel >= 1 && tonerLevel <= 100) {
 
-        this.tonerLevel = addTonerLevel;
-        this.numberOfPagesPrinted = numberOfPagesPrinted;
+            this.tonerLevel = tonerLevel;
+
+        } else {
+            this.tonerLevel = -1;
+        }
+
         this.duplexPrinter = duplexPrinter;
+        this.numberOfPagesPrinted = 0;
     }
 
-    public void addToner(int tonerAddition) {
-        this.tonerLevel = this.tonerLevel + tonerAddition;
-        System.out.println("Toner level added: " + this.tonerLevel);
+    public int addToner(int tonerAddition) {
+
+        if (tonerAddition >= 1 && tonerAddition <= 100) {
+
+            if (this.tonerLevel + tonerAddition > 100) {
+                return -1;
+            }
+
+            return this.tonerLevel = this.tonerLevel + tonerAddition;
+
+        } else {
+            return -1;
+        }
+
     }
 
-    public void addPagesPrinted(int addNumberOfPages) {
-        this.numberOfPagesPrinted = this.numberOfPagesPrinted + addNumberOfPages;
-        System.out.println("Number of pages printed " + this.numberOfPagesPrinted);
-    }
+    public int addPagesPrinted(int addNumberOfPages) {
 
-    public int getTonerLevel() {
-        return tonerLevel;
+        int pagesToPrint = addNumberOfPages;
+        if (this.duplexPrinter) {
+
+            pagesToPrint = pagesToPrint / 2;
+            System.out.println("Printing in duplex.");
+
+        }
+        this.numberOfPagesPrinted += pagesToPrint;
+        return numberOfPagesPrinted;
+
     }
 
     public int getNumberOfPagesPrinted() {
         return numberOfPagesPrinted;
     }
 
-    public boolean isDuplexPrinter() {
-        return duplexPrinter;
-    }
 }
