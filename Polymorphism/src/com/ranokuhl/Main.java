@@ -11,7 +11,12 @@ class Movie {
     public String plot() {
         return "No plot here";
     }
+
+    public String getName() {
+        return name;
+    }
 }
+
 
 class Jaws extends Movie {
     public Jaws() {
@@ -68,7 +73,17 @@ class Forgetable extends Movie {
 public class Main {
 
     public static void main(String[] args) {
-        // write your code here
+
+        for (int i = 0; i < 11; i++) {
+
+            Movie movie = randomMovie();
+
+            System.out.println("Number of movie: " + i + " : " + movie.getName() + " with Plot : " + movie.plot());
+
+        }
+
+
+
     }
 
     public static Movie randomMovie() {
@@ -86,8 +101,12 @@ public class Main {
                 return new StarWars();
             case 5:
                 return new Forgetable();
+            default:
+                return null;
         }
     }
+
+
 }
 
 
