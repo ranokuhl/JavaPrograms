@@ -4,12 +4,17 @@ class Car {
 
     private String name;
     private int cylinders;
+    private int wheels;
+    private boolean engine;
 
 
     public Car(int cylinders, String name) {
 
         this.cylinders = cylinders;
         this.name = name;
+        this.wheels = 4;
+        this.engine = true;
+
     }
 
     public String getName() {
@@ -26,6 +31,10 @@ class Car {
 
     public String accelerate() {
         return "A car accelerated";
+    }
+
+    public String brake() {
+        return "A car hits the brake.";
     }
 }
 
@@ -72,7 +81,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Car car = new Toyota();
+        Car car = new Car(6, "base car");
 
         System.out.println("Car name: " + car.getName());
         System.out.println("Amount of cylinders: " + car.getCylinders());
@@ -80,7 +89,14 @@ public class Main {
         System.out.println("Accelerated: " + car.accelerate());
         System.out.println("=================================");
 
-        Car car2= new Saab();
+        Car car1 = new Toyota();
+        System.out.println("Car name: " + car1.getName());
+        System.out.println("Amount of cylinders: " + car1.getCylinders());
+        System.out.println("Engine: " + car1.startEngine());
+        System.out.println("Accelerated: " + car1.accelerate());
+        System.out.println("=================================");
+
+        Car car2 = new Saab();
 
         System.out.println("Car name: " + car2.getName());
         System.out.println("Amount of cylinders: " + car2.getCylinders());
