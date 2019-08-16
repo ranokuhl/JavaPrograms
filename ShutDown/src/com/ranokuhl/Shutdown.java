@@ -16,11 +16,9 @@ public class Shutdown {
         {
 
             Scanner scanner = new Scanner(System.in);
-            System.out.println("Input computername: ");
+            System.out.println("Input computername or IP-Address: ");
 
             String userInput = scanner.nextLine();
-
-
 
             InetAddress IPAddress = InetAddress.getByName(userInput);
 
