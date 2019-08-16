@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="66a0f54e-683a-469c-add5-394008d5ca27" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/OOPTest.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/ranokuhl/Hamburger.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/ranokuhl/HealthyBurger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OOPTest/com/ranokuhl/BaseBurger.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OOPTest/com/ranokuhl/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOPTest/com/ranokuhl/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/ranokuhl/Hamburger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ranokuhl/Hamburger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/ranokuhl/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ranokuhl/Main.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,20 +24,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/ranokuhl/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+            <state relative-caret-position="396">
+              <caret line="18" column="69" selection-start-line="18" selection-start-column="69" selection-end-line="18" selection-end-column="69" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/ranokuhl/Hamburger.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
-              <caret line="30" column="27" selection-start-line="30" selection-start-column="27" selection-end-line="30" selection-end-column="27" />
+            <state relative-caret-position="504">
+              <caret line="69" column="9" lean-forward="true" selection-start-line="69" selection-start-column="9" selection-end-line="69" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/ranokuhl/HealthyBurger.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="259">
+              <caret line="20" column="40" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
             </state>
           </provider>
         </entry>
@@ -54,17 +67,9 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/com/ranokuhl/BaseBurger.java" />
-        <option value="$PROJECT_DIR$/src/com/ranokuhl/Main.java" />
         <option value="$PROJECT_DIR$/src/com/ranokuhl/Hamburger.java" />
-      </list>
-    </option>
-  </component>
-  <component name="ProjectConfigurationFiles">
-    <option name="files">
-      <list>
-        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
-        <option value="$PROJECT_DIR$/.idea/encodings.xml" />
-        <option value="$PROJECT_DIR$/.idea/uiDesigner.xml" />
+        <option value="$PROJECT_DIR$/src/com/ranokuhl/HealthyBurger.java" />
+        <option value="$PROJECT_DIR$/src/com/ranokuhl/Main.java" />
       </list>
     </option>
   </component>
@@ -82,6 +87,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -104,12 +110,12 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.folding" />
@@ -165,7 +171,7 @@
       <window_info id="UI Designer" order="2" />
       <window_info id="Capture Tool" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.17004265" />
+      <window_info content_ui="combo" id="Project" order="5" weight="0.1716418" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Version Control" order="0" weight="0.3294509" />
       <window_info anchor="bottom" id="Terminal" order="1" />
@@ -184,22 +190,29 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="5" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="6" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="7" weight="0.25" />
-      <window_info anchor="right" id="Run" order="8" sideWeight="0.5005417" side_tool="true" weight="0.2857143" />
-      <window_info anchor="right" id="Messages" order="9" sideWeight="0.49945828" weight="0.2857143" />
+      <window_info anchor="right" id="Run" order="8" sideWeight="0.503792" side_tool="true" visible="true" weight="0.2857143" />
+      <window_info active="true" anchor="right" id="Messages" order="9" sideWeight="0.496208" visible="true" weight="0.2857143" />
     </layout>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/ranokuhl/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/com/ranokuhl/Hamburger.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        <state relative-caret-position="504">
+          <caret line="69" column="9" lean-forward="true" selection-start-line="69" selection-start-column="9" selection-end-line="69" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/ranokuhl/Hamburger.java">
+    <entry file="file://$PROJECT_DIR$/src/com/ranokuhl/HealthyBurger.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="30" column="27" selection-start-line="30" selection-start-column="27" selection-end-line="30" selection-end-column="27" />
+        <state relative-caret-position="259">
+          <caret line="20" column="40" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ranokuhl/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="18" column="69" selection-start-line="18" selection-start-column="69" selection-end-line="18" selection-end-column="69" />
         </state>
       </provider>
     </entry>
