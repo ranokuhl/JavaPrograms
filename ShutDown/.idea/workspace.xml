@@ -7,12 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9d88a7e0-8473-47ed-877f-2d15fce458b8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/ShutDown_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ShutDown.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GetIpAddress/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../GetIpAddress/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GetIpAddress/out/production/GetIpAddress/GetIpAddress.class" beforeDir="false" afterPath="$PROJECT_DIR$/../GetIpAddress/out/production/GetIpAddress/GetIpAddress.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GetIpAddress/src/GetIpAddress.java" beforeDir="false" afterPath="$PROJECT_DIR$/../GetIpAddress/src/GetIpAddress.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/ranokuhl/Shutdown.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ranokuhl/Shutdown.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,16 +20,24 @@
     <option name="optimizeImportsOnTheFly" value="true" />
   </component>
   <component name="DefaultGradleProjectSettings">
-    <option name="testRunner" value="GRADLE" />
-    <option name="delegatedBuild" value="true" />
+    <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/ranokuhl/Shutdown.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="27" column="56" lean-forward="true" selection-start-line="27" selection-start-column="56" selection-end-line="27" selection-end-column="56" />
+            <state relative-caret-position="355">
+              <caret line="21" selection-start-line="21" selection-end-line="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/MANIFEST.MF">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
             </state>
           </provider>
         </entry>
@@ -110,6 +113,12 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="ranokuhl" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="ShutDown" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ShutDown" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="META-INF" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -117,6 +126,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../GetIpAddress" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.0" />
@@ -173,7 +183,7 @@
       <window_info id="UI Designer" order="2" />
       <window_info id="Capture Tool" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.17004265" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.1716418" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Version Control" order="0" weight="0.3294509" />
       <window_info anchor="bottom" id="Terminal" order="1" />
@@ -197,10 +207,17 @@
     </layout>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/MANIFEST.MF">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/ranokuhl/Shutdown.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="27" column="56" lean-forward="true" selection-start-line="27" selection-start-column="56" selection-end-line="27" selection-end-column="56" />
+        <state relative-caret-position="355">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
         </state>
       </provider>
     </entry>
