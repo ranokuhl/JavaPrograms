@@ -16,6 +16,8 @@ public class Main {
             System.out.println("Element " + i + " has value of " + myIntegers[i]);
         }
 
+        System.out.println("Average sum is " + getAverageInt(myIntegers));
+
     }
 
 
@@ -31,6 +33,21 @@ public class Main {
         }
 
         return values;
+
+    }
+
+    public static double getAverageInt(int[] number) {
+
+        int sum = 0;
+
+        for (int i = 0; i < number.length; i++) {
+
+            sum += number[i];
+
+        }
+
+        return sum / (double) number.length;
+
 
     }
 
