@@ -8,14 +8,13 @@ public class Main {
 
     public static void main(String[] args) {
 
+
         int[] myIntegers = getInteger(5);
 
         for (int i = 0; i < myIntegers.length ; i++) {
 
             System.out.println("Element " + i + " has value of " + myIntegers[i]);
         }
-
-
 
     }
 
