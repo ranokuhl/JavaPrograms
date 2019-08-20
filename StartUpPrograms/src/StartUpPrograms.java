@@ -6,7 +6,30 @@ public class StartUpPrograms {
 
     public static void main(String[] args) throws IOException {
 
-        launch("PATH_NAME");
+        try {
+            boolean flag = true;
+
+            int temp;
+
+            while (flag) {
+
+                flag = false;
+
+                for (int i = 0; i < 11; i++) {
+
+                    launch("PATH_NAME");
+
+
+                    flag = true;
+                }
+                break;
+
+            }
+        } catch (Exception e) {
+
+            System.out.println("Something went wrong.");
+        }
+
 
     }
 
