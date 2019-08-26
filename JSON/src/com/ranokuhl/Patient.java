@@ -1,5 +1,6 @@
-public class Patient {
+package com.ranokuhl;
 
+public class Patient {
 
     private String firstName;
     private String lastName;
@@ -9,6 +10,17 @@ public class Patient {
     private String state;
     private String zip;
     private String phone;
+
+    public Patient(String firstName, String lastName, String dateOfBirth, String address, String city, String state, String zip, String phone) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.dateOfBirth = dateOfBirth;
+        this.address = address;
+        this.city = city;
+        this.state = state;
+        this.zip = zip;
+        this.phone = phone;
+    }
 
     public String getFirstName() {
         return firstName;
@@ -75,7 +87,7 @@ public class Patient {
     }
 
     public String toString() {
-        return "Patient [ firstname: " + firstName +
+        return "Patient [ firstName: " + firstName +
                 ", lastName: " + lastName +
                 ", dateOfBirth: " + dateOfBirth +
                 ", address: " + address +
@@ -84,5 +96,4 @@ public class Patient {
                 ", zip: " + zip +
                 ", phone: " + phone + " ]";
     }
-
 }
