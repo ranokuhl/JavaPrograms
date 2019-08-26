@@ -1,4 +1,4 @@
-package com.ranokuhl;
+package com.ranokuhl.patient;
 
 public class Patient {
 
@@ -10,17 +10,6 @@ public class Patient {
     private String state;
     private String zip;
     private String phone;
-
-    public Patient(String firstName, String lastName, String dateOfBirth, String address, String city, String state, String zip, String phone) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.dateOfBirth = dateOfBirth;
-        this.address = address;
-        this.city = city;
-        this.state = state;
-        this.zip = zip;
-        this.phone = phone;
-    }
 
     public String getFirstName() {
         return firstName;
