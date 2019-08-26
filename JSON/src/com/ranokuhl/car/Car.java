@@ -1,4 +1,4 @@
-package com.ranokuhl;
+package com.ranokuhl.car;
 
 public class Car {
     private String color;
