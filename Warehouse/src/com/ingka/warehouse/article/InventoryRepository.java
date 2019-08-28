@@ -10,7 +10,8 @@ public class InventoryRepository {
 
     public static void main(String[] args) throws IOException {
 
-        File jsonFile = new File("c:\\app-win\\json\\inventory.json");
+        // File jsonFile = new File("c:\\app-win\\json\\inventory.json");
+        File jsonFile = new File("/home/rano/code/ranokuhl/JavaPrograms/Warehouse/libs/inventory.json");
 
         ObjectMapper objectMapper = new ObjectMapper();
 
@@ -33,7 +34,7 @@ public class InventoryRepository {
                 System.out.printf("\n");
 
 //                System.out.println("art_id : " + art_id);
-//                System.out.println("name : " + name);
+//                System.out.println("name : " + name);/home/rano/code/ranokuhl/javaprograms/warehouse/libs
 //                System.out.println("stock : " + stock);
             }
         }
