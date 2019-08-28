@@ -8,6 +8,8 @@ import com.fasterxml.jackson.databind.node.ObjectNode;
 import com.ingka.warehouse.product.Product;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileReader;
 import java.io.IOException;
 import java.util.Map;
 
@@ -17,21 +19,31 @@ public class ProductRepository {
 
     public static void main(String[] args) throws IOException {
 
+
         ObjectMapper mapper = new ObjectMapper();
 
 
         // File jsonFile = new File("c:\\app-win\\json\\products.json");
-        File jsonFile = new File("/home/rano/code/ranokuhl/JavaPrograms/Warehouse/libs/products.json");
+        FileInputStream jsonFile;
+        jsonFile = new FileInputStream("/home/rano/code/ranokuhl/JavaPrograms/Warehouse/libs/products.json");
 
         Products product = mapper.readValue(jsonFile, Products.class);
-        System.out.println(product);
+
+        System.out.println("+++++++++++ Printing products +++++++++++\n");
+
+
+        System.out.println("Product: " + product.toString());
         System.out.println("==================");
         System.out.println("name: " + product.getName());
         System.out.println("Contain: " + product.getProducts());
+        System.out.println(product.getAmount_of());
 
-        String prettyStaff1 = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(product);
 
-        System.out.println(prettyStaff1);
+        jsonFile.close();
+
+        //String prettyStaff1 = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(product);
+
+        //System.out.println(prettyStaff1);
     }
 }
 

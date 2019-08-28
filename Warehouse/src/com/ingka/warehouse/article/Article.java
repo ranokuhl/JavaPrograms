@@ -25,8 +25,5 @@ public class Article {
         this.amount_of = amount_of;
     }
 
-//    @Override
-//    public String toString() {
-//        return getArt_id() + getAmount_of();
-//    }
+
 }
