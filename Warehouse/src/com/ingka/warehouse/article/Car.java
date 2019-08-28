@@ -1,14 +1,16 @@
 package com.ingka.warehouse.article;
 
-import java.util.List;
-
-public class Article {
+public class Car {
 
     private int art_id;
     private String name;
     private int stock;
 
-    public Article(int art_id, String name, int stock) {
+    public Car() {
+
+    }
+
+    public Car(int art_id, String name, int stock) {
         this.art_id = art_id;
         this.name = name;
         this.stock = stock;
@@ -38,12 +40,9 @@ public class Article {
         this.stock = stock;
     }
 
-    @Override
-    public String toString() {
-        return getArt_id() + ", " +
-                getName() + ", " +
-                getStock();
+/*    public String toString() {
+
+        return getArt_id() + ", " + getName() + ", " + getStock();
     }
+    */
 }
-
-
