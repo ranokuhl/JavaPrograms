@@ -1,6 +1,7 @@
 package com.ingka.warehouse.article;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ArrayNode;
@@ -11,6 +12,10 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileReader;
 import java.io.IOException;
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.ListIterator;
 import java.util.Map;
 
 public class ProductRepository {
@@ -18,6 +23,7 @@ public class ProductRepository {
 
 
     public static void main(String[] args) throws IOException {
+
 
 
         ObjectMapper mapper = new ObjectMapper();
@@ -32,11 +38,21 @@ public class ProductRepository {
         System.out.println("+++++++++++ Printing products +++++++++++\n");
 
 
-        System.out.println("Product: " + product.toString());
+        System.out.println("Product: " + product.getProducts());
+        System.out.println("Name: " + product.getName());
+        
+        System.out.println(new StringBuilder().append("mylist: ").append(product.getName()).toString());
+
+//        List myArray = product.getProducts();
+//        System.out.println("My Arrray: " + myArray);
+
+        String prettyProducts = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(product );
+        System.out.println("Pretty String:\n" + prettyProducts);
+
         System.out.println("==================");
-        System.out.println("name: " + product.getName());
-        System.out.println("Contain: " + product.getProducts());
-        System.out.println(product.getAmount_of());
+//        System.out.println("name: " + product.getName());
+//        System.out.println("articles : " + product.getContain_articles());
+//        System.out.println("Contain: " + product.getProducts().get);
 
 
         jsonFile.close();
