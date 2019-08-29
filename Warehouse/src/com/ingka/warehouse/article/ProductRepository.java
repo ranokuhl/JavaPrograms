@@ -6,7 +6,6 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
-import com.ingka.warehouse.product.Product;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -38,18 +37,53 @@ public class ProductRepository {
         System.out.println("+++++++++++ Printing products +++++++++++\n");
 
 
-        System.out.println("Product: " + product.getProducts());
-        System.out.println("Name: " + product.getName());
-        
-        System.out.println(new StringBuilder().append("mylist: ").append(product.getName()).toString());
+        //System.out.println(product.getProducts().get(0).toString());
+
+
+                //mapper.createArrayNode(product.getProducts());
+//        Array myArray[] = new Array[product.getProducts()];
+
+//        for(int i = 0; new Array(); i++) {
+//            System.out.println(" - " + a);
+//        }
+
+        for (Product a : product.getProducts()) {
+
+            System.out.println(a.getContainArticles());
+
+        }
+
+
+
+        System.out.println("==== Array node ====");
+        ArrayNode array = mapper.createArrayNode();
+
+        int i = 0;
+        while (i < 6) {
+            array.add(mapper.createArrayNode().add("" + i++).add("" + i++));
+        }
+        System.out.println(array);
+        System.out.println("=================");
+
+
+        System.out.println("");
+        System.out.println("Product name: " + product.getProducts().get(0).getName());
+        System.out.println("Product: " + product.getProducts().get(0).getName());
+        System.out.println("Article number: " + product.getProducts().get(0).getContainArticles().get(0));
+        System.out.println("Amount: " + product.getProducts().get(0).getContainArticles().get(1));
+
 
 //        List myArray = product.getProducts();
 //        System.out.println("My Arrray: " + myArray);
+
+/*
 
         String prettyProducts = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(product );
         System.out.println("Pretty String:\n" + prettyProducts);
 
         System.out.println("==================");
+
+*/
 //        System.out.println("name: " + product.getName());
 //        System.out.println("articles : " + product.getContain_articles());
 //        System.out.println("Contain: " + product.getProducts().get);
