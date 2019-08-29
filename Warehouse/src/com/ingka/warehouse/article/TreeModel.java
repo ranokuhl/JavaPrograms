@@ -15,36 +15,38 @@ public class TreeModel {
 
     public static void main(String[] args) {
 
+        // listInventory();
+        listProducts();
+
+    }
+
+    private static void listProducts() {
+
         try {
 
-            JsonNode root = mapper.readTree(new File("c:\\app-win\\json\\user.json"));
+            JsonNode rootArrayProducts = mapper.readTree(new File("/home/rano/code/ranokuhl/JavaPrograms/Warehouse/libs/products.json"));
 
-            // Get id
-            long id = root.path("id").asLong();
-            System.out.println("id : " + id);
+            for (JsonNode rootProducts : rootArrayProducts) {
 
-            // Get Name
-            JsonNode nameNode = root.path("name");
-            if (!nameNode.isMissingNode()) {        // if "name" node is exist
-                System.out.println("firstName : " + nameNode.path("first").asText());
-                System.out.println("middleName : " + nameNode.path("middle").asText());
-                System.out.println("lastName : " + nameNode.path("last").asText());
-            }
+                System.out.println("Root path: " + rootProducts);
 
-            // Get Contact
-            JsonNode contactNode = root.path("contact");
-            if (contactNode.isArray()) {
+                for (JsonNode productsArray : rootProducts) {
+                    // System.out.println("Products Array: " + productsArray);
+                    System.out.println("========================");
+                    System.out.println("Product name: " + productsArray.path("name").asText());
 
-                System.out.println("Is this node an Array? " + contactNode.isArray());
+                    for (JsonNode containArticlesArray : productsArray) {
+                        // System.out.println("ContainArticles: " + containArticlesArray);
+                        for (JsonNode innerContainArticlesArray : containArticlesArray) {
 
-                for (JsonNode node : contactNode) {
-                    String type = node.path("type").asText();
-                    String ref = node.path("ref").asText();
-                    System.out.println("type : " + type);
-                    System.out.println("ref : " + ref);
+                            // System.out.println("InnerContainerArticlesArray: " + innerContainArticlesArray);
+                            System.out.println("Article number: " + innerContainArticlesArray.path("art_id"));
+                            System.out.println("Amount of: " + innerContainArticlesArray.path("amount_of"));
+                        }
+                    }
+                    System.out.println("========================");
                 }
             }
-
         } catch (JsonGenerationException e) {
             e.printStackTrace();
         } catch (JsonMappingException e) {
@@ -54,5 +56,31 @@ public class TreeModel {
         }
     }
 
+    private static void listInventory() {
 
+        try {
+
+            //JsonNode root = mapper.readTree(new File("c:\\app-win\\json\\user.json"));
+            JsonNode rootArrayInventory = mapper.readTree(new File("/home/rano/code/ranokuhl/JavaPrograms/Warehouse/libs/inventory.json"));
+
+            for (JsonNode rootInventory : rootArrayInventory) {
+                System.out.println("RootArayInventory: " + rootInventory);
+
+                for (JsonNode inventoryArray : rootInventory) {
+                    // System.out.println("inventoryArray: " + inventoryArray);
+                    System.out.println("========================");
+                    System.out.println("Article number: " + inventoryArray.path("art_id").asText());
+                    System.out.println("Article name: " + inventoryArray.path("name").asText());
+                    System.out.println("Stock: " + inventoryArray.path("stock").asText());
+                }
+
+            }
+        } catch (JsonGenerationException e) {
+            e.printStackTrace();
+        } catch (JsonMappingException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }

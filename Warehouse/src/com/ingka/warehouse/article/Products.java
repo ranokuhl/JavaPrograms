@@ -8,29 +8,24 @@ import java.util.List;
 public class Products {
 
 
-    private List products;
-    private String name;
+    private List<Product> products;
 
-    public Products() {}
+    public Products() {
+    }
 
-    public Products(List products, String name) {
+    public Products(List<Product> products) {
         this.products = products;
-        this.name = name;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public List getProducts() {
+    public List<Product> getProducts() {
         return products;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setProducts(List<Product> products) {
+        this.products = products;
     }
 
-    public void setProducts(List products) {
-        this.products = products;
+    public String toString() {
+        return "" + products;
     }
 }
