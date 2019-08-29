@@ -49,7 +49,7 @@ public class ProductRepository {
 
         for (Product a : product.getProducts()) {
 
-            System.out.println(a.getContainArticles());
+            System.out.println("a: " + a.getContainArticles());
 
         }
 
