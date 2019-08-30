@@ -9,6 +9,11 @@ public class Article {
 
     }
 
+    public Article(String art_id, String amount_of) {
+        this.art_id = art_id;
+        this.amount_of = amount_of;
+    }
+
     public String getArt_id() {
         return art_id;
     }
@@ -25,5 +30,8 @@ public class Article {
         this.amount_of = amount_of;
     }
 
-
+    public String toString() {
+        return "art_id: \"" + art_id + "\"" +
+                "amount_of: \"" + amount_of + "\"";
+    }
 }
