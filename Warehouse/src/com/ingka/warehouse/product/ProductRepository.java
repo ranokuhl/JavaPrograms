@@ -1,9 +1,12 @@
 package com.ingka.warehouse.product;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ProductRepository {
 
@@ -12,19 +15,79 @@ public class ProductRepository {
     public static void main(String[] args) throws IOException {
 
         ObjectMapper mapper = new ObjectMapper();
+        mapper.setDefaultPropertyInclusion(
+                JsonInclude.Value.construct(JsonInclude.Include.ALWAYS, JsonInclude.Include.NON_NULL));
 
         // File jsonFile = new File("c:\\app-win\\json\\products.json");
-        FileInputStream jsonFile = new FileInputStream("/home/rano/code/ranokuhl/JavaPrograms/Warehouse/libs/products.json");
+        FileInputStream jsonFileProducts = new FileInputStream("/home/rano/code/ranokuhl/JavaPrograms/Warehouse/libs/products.json");
+        FileInputStream jsonFileInventory= new FileInputStream("/home/rano/code/ranokuhl/JavaPrograms/Warehouse/libs/inventory.json");
 
-        Products currentProducts = mapper.readValue(jsonFile, Products.class);
+        Products currentProducts = mapper.readValue(jsonFileProducts, Products.class);
+        ProductInventory currentInventory = mapper.readValue(jsonFileInventory, ProductInventory.class);
 
-        System.out.println("+++++++++++ Printing products +++++++++++\n");
-        System.out.println("currentProducts: \n" + currentProducts);
-        //System.out.println("getProducts: \n" + currentProducts.getProducts());
-        System.out.println("Container art: \n" + currentProducts.getProducts().get(0).getContainArticles());
+        System.out.println("Current Products" + currentProducts.getProducts().get(0).getContainArticles().toString());
+        System.out.println("Current Inventory: " + currentInventory);
+
+        List myProductList = currentProducts.getProducts().get(0).getContainArticles();
+        //List myInventoryList = currentInventory.getInventory();
+        ArrayList myProducts = new ArrayList(myProductList);
+       // ArrayList myInventory = new ArrayList(myInventoryList);
+//        System.out.println("MyInventory: " + myInventory);
+//        System.out.println("MyProducts: " + myProductList);
+
+        //myProductList.addAll(myInventoryList);
+        // System.out.println("Merge List: " + myProductList);
+
+//        String prettyProducts = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(myProductList);
+//        System.out.println("Pretty String Merge List:\n" + prettyProducts);
+
+//        Iterator it = myProducts.iterator();
+//
+//        while(it.hasNext()) {
+//            Object element = it.next();
+//            System.out.println(element + " ");
+//        }
+
+
+
+/*
+
+        System.out.println("+++++++++++ Printing products - Before Merge +++++++++++\n");
+        // System.out.println("currentProducts: \n" + currentProducts);
+        System.out.println("Product Name: " + currentProducts.getProducts().get(0).getName());
+        System.out.println("Contains: " + currentProducts.getProducts().get(0).getContainArticles().get(1).getAmountOf());
+        System.out.println("In stock: " + currentProducts.getProducts().get(0).getContainArticles().get(1).getInventory()); // gives "In Stock: null"
         //System.out.println("ToString: \n" + currentProducts.toString());
-        System.out.println("art_id \n" + currentProducts.getProducts().get(1).getContainArticles().get(0).getArtId());;
-        System.out.println("Amount_of \n" + currentProducts.getProducts().get(1).getContainArticles().get(0).getAmountOf());;
+        System.out.println("++++++++++++++++++++++");
+
+        ObjectMapper objectMapper = new ObjectMapper();
+        FileInputStream jsonFile2 = new FileInputStream("/home/rano/code/ranokuhl/JavaPrograms/Warehouse/libs/inventory.json");
+
+        ObjectReader objectReader = objectMapper.readerForUpdating(currentProducts);
+        Products updatedProducts = objectReader.readValue(jsonFile2);
+        System.out.println("current products object: " + currentProducts);
+        System.out.println("updated object: " + updatedProducts);
+        System.out.println("updated object hashCode: " + System.identityHashCode(updatedProducts));
+        System.out.println("updated nested object 'address' hashCode: " + System
+                .identityHashCode(updatedProducts.getProducts().get(0).getContainArticles().get(0).getInventory()));
+
+*/
+//                System.identityHashCode(updatedProducts.getProducts().get(0).getContainArticles().get(0).getInventory().getName())
+//                + System.identityHashCode(updatedProducts.getProducts().get(0).getContainArticles().get(0).getInventory().getStock()));
+
+//        System.out.println("art_id \n" + currentProducts.getProducts().get(1).getContainArticles().get(0).getArtId());
+//        System.out.println("Amount_of \n" + currentProducts.getProducts().get(1).getContainArticles().get(0).getAmountOf());
+//        String amountString = currentProducts.getProducts().get(1).getContainArticles().get(0).getAmountOf();
+//
+//        Integer amount = Integer.valueOf(amountString);
+//
+//        int addStock = 4;
+//
+//        int result = amount + addStock;
+//
+//        System.out.println(result);
+
+
         //System.out.printf("amount_of: \n" + currentProducts);
 
 

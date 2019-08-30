@@ -1,12 +1,14 @@
 package com.ingka.warehouse.product;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonMerge;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.util.List;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class Product {
 
     private String name;
@@ -17,9 +19,11 @@ public class Product {
 
     }
 
-    public Product(String name, List<ProductContainArticles> containArticles) {
-        this.name = name;
-        this.containArticles = containArticles;
+    public static Product of(String name, List<ProductContainArticles> containArticles) {
+        Product product = new Product();
+        product.setName(name);
+        product.setContainArticles(containArticles);
+        return product;
     }
 
     @JsonProperty("name")
@@ -40,6 +44,12 @@ public class Product {
     @JsonProperty("contain_articles")
     public void setContainArticles(List<ProductContainArticles> containArticles) {
         this.containArticles = containArticles;
+    }
+
+    @Override
+    public String toString() {
+        return "\"name\": " + name + ", " +
+                "\"contain_articles\": " + containArticles;
     }
 
     /*
