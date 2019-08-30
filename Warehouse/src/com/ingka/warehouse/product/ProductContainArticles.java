@@ -1,9 +1,12 @@
 package com.ingka.warehouse.product;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonMerge;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class ProductContainArticles {
 
     private String artId;
@@ -14,12 +17,13 @@ public class ProductContainArticles {
 
     public static ProductContainArticles of(String artId, String amountOf) {
         ProductContainArticles containArticles = new ProductContainArticles();
-        containArticles.artId = artId;
-        containArticles.amountOf = amountOf;
+        containArticles.setArtId(artId);
+        containArticles.setAmountOf(amountOf);
         return containArticles;
 //        this.artId = artId;
 //        this.amountOf = amountOf;
     }
+
 
     @JsonProperty("art_id")
     public String getArtId() {
@@ -43,7 +47,7 @@ public class ProductContainArticles {
 
     @Override
     public String toString() {
-        return "\"art_id\": " + artId +
-                "\"amount_of\": " + amountOf;
+        return "{\"art_id\": " + artId + ", " +
+                "\"amount_of\": " + amountOf + "}";
     }
 }
