@@ -23,18 +23,21 @@ public class ProductRepository {
 
     public static void main(String[] args) throws IOException {
 
-
-
         ObjectMapper mapper = new ObjectMapper();
 
-
         // File jsonFile = new File("c:\\app-win\\json\\products.json");
-        FileInputStream jsonFile;
-        jsonFile = new FileInputStream("/home/rano/code/ranokuhl/JavaPrograms/Warehouse/libs/products.json");
+        FileInputStream jsonFile = new FileInputStream("/home/rano/code/ranokuhl/JavaPrograms/Warehouse/libs/products.json");
 
-        Products product = mapper.readValue(jsonFile, Products.class);
+        Products currentProducts = mapper.readValue(jsonFile, Products.class);
 
         System.out.println("+++++++++++ Printing products +++++++++++\n");
+        System.out.println("currentProducts: \n" + currentProducts);
+        //System.out.println("getProducts: \n" + currentProducts.getProducts());
+        System.out.println("Container art: \n" + currentProducts.getProducts().get(0).getName());
+        //System.out.println("ToString: \n" + currentProducts.toString());
+        System.out.println("art_id \n" + currentProducts.getProducts().get(1).getContainArticles().get(0).getArtId());;
+        System.out.println("Amount_of \n" + currentProducts.getProducts().get(1).getContainArticles().get(0).getAmountOf());;
+        //System.out.printf("amount_of: \n" + currentProducts);
 
 
         //System.out.println(product.getProducts().get(0).toString());
@@ -46,6 +49,7 @@ public class ProductRepository {
 //        for(int i = 0; new Array(); i++) {
 //            System.out.println(" - " + a);
 //        }
+/*
 
         for (Product a : product.getProducts()) {
 
@@ -72,6 +76,7 @@ public class ProductRepository {
         System.out.println("Article number: " + product.getProducts().get(0).getContainArticles().get(0));
         System.out.println("Amount: " + product.getProducts().get(0).getContainArticles().get(1));
 
+*/
 
 //        List myArray = product.getProducts();
 //        System.out.println("My Arrray: " + myArray);
@@ -89,7 +94,7 @@ public class ProductRepository {
 //        System.out.println("Contain: " + product.getProducts().get);
 
 
-        jsonFile.close();
+        //jsonFile.close();
 
         //String prettyStaff1 = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(product);
 
