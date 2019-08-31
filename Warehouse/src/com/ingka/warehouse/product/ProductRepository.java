@@ -2,11 +2,14 @@ package com.ingka.warehouse.product;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.jsonFormatVisitors.JsonArrayFormatVisitor;
 
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class ProductRepository {
 
@@ -19,18 +22,122 @@ public class ProductRepository {
                 JsonInclude.Value.construct(JsonInclude.Include.ALWAYS, JsonInclude.Include.NON_NULL));
 
         // File jsonFile = new File("c:\\app-win\\json\\products.json");
-        FileInputStream jsonFileProducts = new FileInputStream("/home/rano/code/ranokuhl/JavaPrograms/Warehouse/libs/products.json");
-        FileInputStream jsonFileInventory= new FileInputStream("/home/rano/code/ranokuhl/JavaPrograms/Warehouse/libs/inventory.json");
+        FileInputStream jsonFileProducts = new FileInputStream("c:\\app-win\\json\\products.json");
+        FileInputStream jsonFileInventory= new FileInputStream("c:\\app-win\\json\\inventory.json");
 
         Products currentProducts = mapper.readValue(jsonFileProducts, Products.class);
         ProductInventory currentInventory = mapper.readValue(jsonFileInventory, ProductInventory.class);
 
-        System.out.println("Current Products" + currentProducts.getProducts().get(0).getContainArticles().toString());
-        System.out.println("Current Inventory: " + currentInventory);
+        System.out.println("Current Products" + currentProducts.getProducts().get(0).getContainArticles());
+        System.out.println("Current Inventory: " + currentInventory.getInventory());
+        System.out.println("======== using set =========");
 
-        List myProductList = currentProducts.getProducts().get(0).getContainArticles();
-        //List myInventoryList = currentInventory.getInventory();
-        ArrayList myProducts = new ArrayList(myProductList);
+        Set myInventoryList = currentInventory.getInventory();
+        Set<String> test = new HashSet<>(myInventoryList);
+        test = mapper.readValue(jsonFileInventory, Set.class);
+
+        for (Iterator<String> iterator = test.iterator();iterator.hasNext();) {
+            String testPrint = (String) iterator.next();
+            System.out.println(testPrint);
+
+//            String prettyProducts = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(myInventoryList);
+//            System.out.println("Pretty String Merge List:\n" + prettyProducts);
+
+        }
+
+
+
+
+//
+//
+//        Map<String, String> myMap = new HashMap<String, String>(currentProducts.getProducts().get(0).getContainArticles());
+//        System.out.println("my map : " + myMap);
+//
+//        System.out.println("myProductList : " + myProductList);
+//        System.out.println("myInventoryList : " + myInventoryList);
+
+//        System.out.println("========Array list checking ============");
+
+
+
+//        ArrayList<String> myProducts = new ArrayList(myProductList);
+//        ArrayList<String> myInventory = new ArrayList(myInventoryList);
+
+//        System.out.println("myProductList is Object array?" + myProductList);
+//        String[] str = GetStringArray(myProductList);
+//        System.out.println("String Array[]: " + Arrays.toString(str));
+//        System.out.println("myInventoryList is Object array?" + myInventory);
+
+//        List<String> noDup = Stream.concat(myProducts.stream(), myInventory.stream())
+////                .distinct()
+////                .collect(Collectors.toList());
+////        for (String s : noDup) {
+////            System.out.println(s);
+////        }
+
+//        System.out.println("======== Array String Set ==============");
+//        List<String> strings = myProducts.stream()
+//                .map(object -> Objects.toString(object, null))
+//                .collect(Collectors.toList());
+//        System.out.println("Strings : " + strings);
+
+
+/*        System.out.println("======== using Set ==============");
+
+//        Set<String> set = new LinkedHashSet<>(myProducts);
+//        set.addAll(myInventory);
+//        List<String> combinedList = new ArrayList<>(set);
+//
+//        System.out.println("List Combined: " + combinedList);
+//
+//        List<String> listTwoCopy = new ArrayList<>(myInventory);
+//        listTwoCopy.removeAll(myProducts);
+//        myProducts.addAll(listTwoCopy);
+//
+//        System.out.println("myProducts combined: " + myProducts);
+
+
+        System.out.println("=========================");*/
+
+
+
+/*        myInventory.removeAll(myProducts);
+//        System.out.println(myInventory);
+        myInventory.addAll(myProducts);
+//        System.out.println(myInventory);*/
+
+//        //System.out.println("myinventory sort :");
+//        String prettyProducts = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(myProducts);
+//        System.out.println("Pretty String Merge Product List:\n" + prettyProducts);
+//
+//        String prettyProducts2 = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(myInventoryList);
+//        System.out.println("Pretty String Merge Inventory List:\n" + prettyProducts2);
+
+
+/*
+        List<String> combinedList = Stream.of(myProducts, myInventory)
+                .flatMap(x -> x.stream())
+                .collect(Collectors.toList());
+        System.out.println("Combined list: " + combinedList);
+*/
+
+/*
+        Set<String> set = new LinkedHashSet<>(myProducts);
+        set.addAll(myInventory);
+        List<String> combinedList = new ArrayList<>(set);
+
+        System.out.println("List Combined: " + combinedList);
+
+        List<String> listTwoCopy = new ArrayList<>(myInventory);
+        listTwoCopy.removeAll(myProducts);
+        myProducts.addAll(listTwoCopy);
+
+        System.out.println("myProcuts combined: " + myProducts);
+*/
+
+
+
+
        // ArrayList myInventory = new ArrayList(myInventoryList);
 //        System.out.println("MyInventory: " + myInventory);
 //        System.out.println("MyProducts: " + myProductList);
@@ -151,6 +258,22 @@ public class ProductRepository {
 
         //System.out.println(prettyStaff1);
     }
+
+/*    public static String[] GetStringArray(ArrayList<String> arr)
+    {
+
+        // declaration and initialise String Array
+        String str[] = new String[arr.size()];
+
+        // ArrayList to Array Conversion
+        for (int j = 0; j < arr.size(); j++) {
+
+            // Assign each value to String array
+            str[j] = arr.get(j);
+        }
+
+        return str;
+    }*/
 }
 
 
