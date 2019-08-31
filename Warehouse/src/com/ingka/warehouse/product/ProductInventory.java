@@ -7,26 +7,27 @@ import com.fasterxml.jackson.annotation.JsonMerge;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.util.List;
+import java.util.Set;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class ProductInventory {
 
     @JsonMerge
-    private List<ProductInventoryArticles> inventory;
+    private Set<ProductInventoryArticles> inventory;
 
     public ProductInventory() {
     }
 
-    public ProductInventory(List<ProductInventoryArticles> inventory) {
+    public ProductInventory(Set<ProductInventoryArticles> inventory) {
         this.inventory = inventory;
     }
 
-    public List<ProductInventoryArticles> getInventory() {
+    public Set<ProductInventoryArticles> getInventory() {
         return inventory;
     }
 
-    public void setInventory(List<ProductInventoryArticles> inventory) {
+    public void setInventory(Set<ProductInventoryArticles> inventory) {
         this.inventory = inventory;
     }
 
