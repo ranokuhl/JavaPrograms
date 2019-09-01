@@ -1,21 +1,22 @@
 package com.ingka.warehouse.engine;
 
-import com.fasterxml.jackson.core.JsonFactory;
+
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
+
 import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
-import com.fasterxml.jackson.databind.util.JSONPObject;
+
 
 import java.io.File;
 import java.io.IOException;
-
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.util.Iterator;
+import java.util.Scanner;
 
 public class RemoveProduct {
+
+    private static Scanner scanner = new Scanner(System.in);
+
+    private static ObjectMapper mapper = new ObjectMapper();
 
     public static void main(String[] args) throws IOException {
 
@@ -25,19 +26,145 @@ public class RemoveProduct {
 
         StringBuilder jsonContent = new StringBuilder();
         Path inputPath = Paths.get("/home/rano/code/ranokuhl/JavaPrograms/Warehouse/libs/array.json");
-        System.out.println(jsonContent);
-
-*/
-        ObjectMapper mapper = new ObjectMapper();
-        JsonNode productNode = mapper.readTree(new File("c:\\app-win\\json\\products.json"));
-        // System.out.println(productNode.findParents("contain_articles").get(1).findParent("amount_of").get("amount_of")); // gives 4
-
-        //int productAmount = productNode.findParents("contain_articles").get(1).findParent("amount_of").get("amount_of").asInt();
+        System.out.println(jsonContent);*/
 
 
-        for (int i = 0; i < productNode.at("/products").toString().length(); i++) {
-            System.out.println(productNode.at("/products").findValues("name").get(i).asText());
+        JsonNode root = mapper.readTree(new File("c:\\app-win\\json\\products.json"));
+        JsonNode productsNode = root.get("products");
+//        JsonNode containArticles = root.get("contain_articles");
+        System.out.println("Root is object?" + root.isObject());
+
+        System.out.println("Products is array?: " + productsNode.isArray());
+
+
+
+
+
+        System.out.println("-------- Products List ----------");
+        if(productsNode.isArray()) {
+
+            for(JsonNode products : productsNode) {
+                System.out.println(products.asText());
+            }
+            System.out.println("=============================");
+
+            System.out.println("Enter name of product that has been sold: \n");
+            System.out.print(">");
         }
+
+/*        String name = scanner.nextLine();
+
+
+
+        System.out.println(name + " has been removed from Products. Inventory stock has been adjusted.");*/
+
+
+
+
+
+
+        JsonNode containProducts = root.findValue("products").get(0);
+
+
+
+        System.out.println(containProducts);
+
+
+
+
+
+
+        System.out.println("=============================");
+
+
+
+
+        JsonNode containArticles = root.findValue("contain_articles").get(0);
+        JsonNode containArticles2 = root.findValue("contain_articles").get(1);
+        System.out.println("Contain articles : " + containArticles);
+        System.out.println("Contain articles : " + containArticles2);
+
+
+
+
+
+
+
+
+//        root1.add()
+//
+//        if (products.isArray()) {
+//            for (final JsonNode item : products) {
+//
+//            }
+//        }
+
+//        ObjectNode productsNode = mapper.createObjectNode(),objectNode;
+//        productsNode.put("name", "Fall Out 4");
+//        ((ObjectNode) root).put("blaat", "blaatvalue");
+
+//        JsonNode productsNode = root.path("products");
+//
+//        System.out.println(productsNode);
+
+//        if (productsNode.isArray()) {
+//
+//            System.out.println("Is this node an Array? " + productsNode.isArray());
+//
+//            for (JsonNode node : productsNode) {
+//                String name = node.path("name").asText();
+//                System.out.println("name : " + name);
+//            }
+//        }
+/*
+        JsonNode productsNode = root.path("products");
+        if (productsNode.isArray()) {
+
+            System.out.println("Is this node an Array? " + productsNode.isArray());
+
+            for (JsonNode node : productsNode) {
+                String name = node.path("name").asText();
+                System.out.println("name : " + name);
+            }
+        }
+*/
+
+
+
+//        // Write to JSON
+//        String resultUpdate = mapper.writeValueAsString(root);
+//        System.out.println("Print results: " + resultUpdate);
+
+
+//
+//        (JsonNode productsNode) = (ObjectNode) root.path("products");
+//
+//        for (JsonNode node : productsNode) {
+//            System.out.println(node.get("name").asText());
+//        }
+
+//        System.out.println("Enter name to remove product: \n");
+//        String name = scanner.nextLine();
+
+
+    }
+}
+
+
+
+
+
+        // update json
+
+
+
+
+
+
+
+//        for (int i = 0; i < productNode.at("/products").toString().length(); i++) {
+//            System.out.println(productNode.at("/products").findValues("name").get(i).asText());
+//        }
 //        System.out.println(productNode.at("/products").findValues("name").get(0).asText());
 //        System.out.println(productNode);
 
@@ -71,8 +198,8 @@ public class RemoveProduct {
 
 //        System.out.println("products : " + printProducts.asText());
 
-        }
-    }
+//        }
+//    }
 
 
 

@@ -2,15 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9237b0ca-141b-4903-be38-5284d76e52c5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/com/ingka/warehouse/article/ReadingJson.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/ingka/warehouse/article/Testing.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/ingka/warehouse/engine/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ArrayListChallenge/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ArrayListChallenge/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Warehouse1/META-INF/Warehouse1.kotlin_module" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Warehouse1/META-INF/Warehouse1.kotlin_module" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Warehouse1/com/ingka/warehouse/WarehouseApp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Warehouse1/com/ingka/warehouse/article/Article.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Warehouse1/com/ingka/warehouse/article/Article.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Warehouse1/com/ingka/warehouse/engine/RemoveProduct.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Warehouse1/com/ingka/warehouse/engine/RemoveProduct.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Warehouse1/com/ingka/warehouse/product/ProductInventory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Warehouse1/com/ingka/warehouse/product/ProductInventory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Warehouse1/com/ingka/warehouse/product/ProductRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Warehouse1/com/ingka/warehouse/product/ProductRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/ingka/warehouse/article/ArticleInventoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ingka/warehouse/article/ArticleInventoryRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/ingka/warehouse/WarehouseApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ingka/warehouse/WarehouseApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/ingka/warehouse/article/Article.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ingka/warehouse/article/Article.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/ingka/warehouse/engine/RemoveProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ingka/warehouse/engine/RemoveProduct.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/ingka/warehouse/product/ProductInventory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ingka/warehouse/product/ProductInventory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/ingka/warehouse/product/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ingka/warehouse/product/ProductRepository.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -24,12 +26,12 @@
   <component name="FileEditorManager">
     <splitter split-orientation="horizontal" split-proportion="0.7138672">
       <split-first>
-        <leaf>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/com/ingka/warehouse/product/ProductRepository.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="186">
-                  <caret line="35" column="58" lean-forward="true" selection-start-line="35" selection-start-column="58" selection-end-line="35" selection-end-column="58" />
+                <state relative-caret-position="595">
+                  <caret line="35" column="58" selection-start-line="35" selection-start-column="58" selection-end-line="35" selection-end-column="58" />
                 </state>
               </provider>
             </entry>
@@ -37,26 +39,62 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/com/ingka/warehouse/engine/RemoveProduct.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="306">
-                  <caret line="30" column="49" lean-forward="true" selection-start-line="30" selection-start-column="49" selection-end-line="30" selection-end-column="49" />
+                <state relative-caret-position="510">
+                  <caret line="51" column="34" selection-start-line="51" selection-start-column="34" selection-end-line="51" selection-end-column="34" />
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/com/ingka/warehouse/product/InventoryArticles.java">
+            <entry file="file://$PROJECT_DIR$/src/com/ingka/warehouse/WarehouseApp.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="68">
-                  <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+                <state relative-caret-position="833">
+                  <caret line="49" lean-forward="true" selection-start-line="49" selection-end-line="49" />
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/com/ingka/warehouse/article/ArticleInventoryRepository.java">
+            <entry file="file://$PROJECT_DIR$/src/com/ingka/warehouse/engine/Product.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="283">
-                  <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+                <state relative-caret-position="221">
+                  <caret line="13" column="24" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/com/ingka/warehouse/product/Product.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="493">
+                  <caret line="35" column="31" selection-end-line="93" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/com/ingka/warehouse/article/Testing.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="527">
+                  <caret line="31" column="13" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/com/ingka/warehouse/product/Products.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="153">
+                  <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/com/ingka/warehouse/product/ProductInventory.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="408">
+                  <caret line="24" selection-start-line="24" selection-end-line="24" />
                 </state>
               </provider>
             </entry>
@@ -64,7 +102,7 @@
         </leaf>
       </split-first>
       <split-second>
-        <leaf>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/libs/inventory.json">
               <provider selected="true" editor-type-id="text-editor" />
@@ -73,8 +111,17 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/libs/products.json">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="17">
-                  <caret line="1" column="11" selection-start-line="1" selection-start-column="3" selection-end-line="1" selection-end-column="11" />
+                <state relative-caret-position="136">
+                  <caret line="8" column="10" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/libs/user.json">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="34">
+                  <caret line="2" column="11" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="11" />
                 </state>
               </provider>
             </entry>
@@ -94,7 +141,11 @@
     <findStrings>
       <find>pretty</find>
       <find>prett</find>
+      <find>art_id</find>
     </findStrings>
+    <replaceStrings>
+      <replace>artId</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -106,6 +157,12 @@
         <option value="$PROJECT_DIR$/src/com/ingka/warehouse/product/ProductInventory.java" />
         <option value="$PROJECT_DIR$/src/com/ingka/warehouse/product/ProductRepository.java" />
         <option value="$PROJECT_DIR$/src/com/ingka/warehouse/article/ArticleInventoryRepository.java" />
+        <option value="$PROJECT_DIR$/src/com/ingka/warehouse/article/Article.java" />
+        <option value="$PROJECT_DIR$/src/com/ingka/warehouse/article/testing.java" />
+        <option value="$PROJECT_DIR$/src/com/ingka/warehouse/article/ReadingJson.java" />
+        <option value="$PROJECT_DIR$/src/com/ingka/warehouse/article/Testing.java" />
+        <option value="$PROJECT_DIR$/src/com/ingka/warehouse/engine/Product.java" />
+        <option value="$PROJECT_DIR$/src/com/ingka/warehouse/WarehouseApp.java" />
         <option value="$PROJECT_DIR$/src/com/ingka/warehouse/engine/RemoveProduct.java" />
       </list>
     </option>
@@ -135,11 +192,6 @@
             <path>
               <item name="Warehouse" type="b2602c69:ProjectViewProjectNode" />
               <item name="Warehouse" type="462c0819:PsiDirectoryNode" />
-              <item name="libs" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Warehouse" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Warehouse" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -147,13 +199,6 @@
               <item name="Warehouse" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="warehouse" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Warehouse" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Warehouse" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="warehouse" type="462c0819:PsiDirectoryNode" />
-              <item name="article" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Warehouse" type="b2602c69:ProjectViewProjectNode" />
@@ -180,14 +225,14 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/libs" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/Databases-Implement-Artist-Query-Source-code" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -219,38 +264,25 @@
     </option>
   </component>
   <component name="RunManager" selected="Application.RemoveProduct">
-    <configuration name="ArticleInventoryRepository" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.ingka.warehouse.article.ArticleInventoryRepository" />
-      <module name="Warehouse1" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.ingka.warehouse.article.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ExampleMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.ingka.warehouse.testing.ExampleMain" />
-      <module name="Warehouse1" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.ingka.warehouse.testing.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="ProductRepository" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.ingka.warehouse.product.ProductRepository" />
       <module name="Warehouse1" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.ingka.warehouse.testing.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ReadingJson" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.ingka.warehouse.article.ReadingJson" />
+      <module name="Warehouse1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ingka.warehouse.article.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -271,12 +303,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TreeModel" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.ingka.warehouse.testing.TreeModel" />
+    <configuration name="Testing" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.ingka.warehouse.article.Testing" />
       <module name="Warehouse1" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.ingka.warehouse.testing.*" />
+          <option name="PATTERN" value="com.ingka.warehouse.article.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WarehouseApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.ingka.warehouse.WarehouseApp" />
+      <module name="Warehouse1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ingka.warehouse.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -285,19 +330,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.TreeModel" />
       <item itemvalue="Application.ProductRepository" />
       <item itemvalue="Application.RemoveProduct" />
-      <item itemvalue="Application.ExampleMain" />
-      <item itemvalue="Application.ArticleInventoryRepository" />
+      <item itemvalue="Application.ReadingJson" />
+      <item itemvalue="Application.Testing" />
+      <item itemvalue="Application.WarehouseApp" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.RemoveProduct" />
-        <item itemvalue="Application.ArticleInventoryRepository" />
+        <item itemvalue="Application.WarehouseApp" />
         <item itemvalue="Application.ProductRepository" />
-        <item itemvalue="Application.ExampleMain" />
-        <item itemvalue="Application.TreeModel" />
+        <item itemvalue="Application.Testing" />
+        <item itemvalue="Application.ReadingJson" />
       </list>
     </recent_temporary>
   </component>
@@ -323,7 +368,7 @@
       <window_info id="UI Designer" order="2" />
       <window_info id="Capture Tool" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.1684435" />
+      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.1716418" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Version Control" order="0" weight="0.3294509" />
       <window_info anchor="bottom" id="Terminal" order="1" />
@@ -379,13 +424,6 @@
     </option>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/ingka/warehouse/product/ProductInventory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/ingka/warehouse/product/ProductInventoryArticles.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-346">
@@ -393,41 +431,111 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ingka/warehouse/article/ArticleInventoryRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ingka/warehouse/product/InventoryArticles.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="23" column="39" lean-forward="true" selection-start-line="23" selection-start-column="39" selection-end-line="23" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ingka/warehouse/product/ProductContainArticles.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-102">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ingka/warehouse/article/Article.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="21" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/ingka/warehouse/product/ProductRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="35" column="58" lean-forward="true" selection-start-line="35" selection-start-column="58" selection-end-line="35" selection-end-column="58" />
+        <state relative-caret-position="595">
+          <caret line="35" column="58" selection-start-line="35" selection-start-column="58" selection-end-line="35" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ingka/warehouse/product/Products.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ingka/warehouse/product/ProductInventory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/libs/inventory.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/ingka/warehouse/article/ArticleInventoryRepository.java">
+    <entry file="file://$PROJECT_DIR$/libs/user.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/ingka/warehouse/product/InventoryArticles.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        <state relative-caret-position="34">
+          <caret line="2" column="11" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="11" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/libs/products.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="11" selection-start-line="1" selection-start-column="3" selection-end-line="1" selection-end-column="11" />
+        <state relative-caret-position="136">
+          <caret line="8" column="10" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ingka/warehouse/product/Product.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="35" column="31" selection-end-line="93" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ingka/warehouse/article/ReadingJson.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="60" lean-forward="true" selection-start-line="60" selection-end-line="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ingka/warehouse/article/Testing.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="31" column="13" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ingka/warehouse/engine/Product.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="24" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ingka/warehouse/WarehouseApp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="833">
+          <caret line="49" lean-forward="true" selection-start-line="49" selection-end-line="49" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/ingka/warehouse/engine/RemoveProduct.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="30" column="49" lean-forward="true" selection-start-line="30" selection-start-column="49" selection-end-line="30" selection-end-column="49" />
+        <state relative-caret-position="510">
+          <caret line="51" column="34" selection-start-line="51" selection-start-column="34" selection-end-line="51" selection-end-column="34" />
         </state>
       </provider>
     </entry>
