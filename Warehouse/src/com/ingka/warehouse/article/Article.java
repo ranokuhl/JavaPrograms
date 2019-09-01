@@ -1,29 +1,35 @@
 package com.ingka.warehouse.article;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.databind.annotation.JsonPOJOBuilder;
+
 public class Article {
 
-    private String art_id;
+    private String artId;
     private String amount_of;
 
     public Article() {
 
     }
 
-    public Article(String art_id, String amount_of) {
-        this.art_id = art_id;
+    public Article(String artId, String amount_of) {
+        this.artId = artId;
         this.amount_of = amount_of;
     }
 
-    public String getArt_id() {
-        return art_id;
+    @JsonProperty("art_id")
+    public String getArtId() {
+        return artId;
     }
 
     public String getAmount_of() {
         return amount_of;
     }
 
-    public void setArt_id(String art_id) {
-        this.art_id = art_id;
+    @JsonProperty("art_id")
+    public void setArtId(String artId) {
+        this.artId = artId;
     }
 
     public void setAmount_of(String amount_of) {
@@ -31,7 +37,7 @@ public class Article {
     }
 
     public String toString() {
-        return "art_id: \"" + art_id + "\"" +
+        return "artId: \"" + artId + "\"" +
                 "amount_of: \"" + amount_of + "\"";
     }
 }
