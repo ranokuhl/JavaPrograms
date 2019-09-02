@@ -20,13 +20,16 @@ public class RemoveProduct {
 
     public static void main(String[] args) throws IOException {
 
+/*
 
         // read json from file to JsonNode
+*/
 /*
 
         StringBuilder jsonContent = new StringBuilder();
         Path inputPath = Paths.get("/home/rano/code/ranokuhl/JavaPrograms/Warehouse/libs/array.json");
-        System.out.println(jsonContent);*/
+        System.out.println(jsonContent);*//*
+
 
 
         JsonNode root = mapper.readTree(new File("c:\\app-win\\json\\products.json"));
@@ -52,11 +55,13 @@ public class RemoveProduct {
             System.out.print(">");
         }
 
+*/
 /*        String name = scanner.nextLine();
 
 
 
-        System.out.println(name + " has been removed from Products. Inventory stock has been adjusted.");*/
+        System.out.println(name + " has been removed from Products. Inventory stock has been adjusted.");*//*
+
 
 
 
@@ -86,6 +91,7 @@ public class RemoveProduct {
 
 
 
+*/
 
 
 

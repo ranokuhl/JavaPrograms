@@ -1,21 +1,175 @@
 package com.ingka.warehouse.product;
 
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.core.JsonFactory;
+import com.fasterxml.jackson.core.JsonParser;
+import com.fasterxml.jackson.core.JsonToken;
 import com.fasterxml.jackson.databind.jsonFormatVisitors.JsonArrayFormatVisitor;
 
-import java.io.FileInputStream;
+import java.io.File;
 import java.io.IOException;
 import java.util.*;
-import java.util.stream.Collector;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
+
 
 public class ProductRepository {
 
-
-
     public static void main(String[] args) throws IOException {
+
+        System.out.println("testing");
+
+    }
+}
+
+
+/*      2019/09/02 results
+
+        Contain Articles: [contain_articles, [, {, art_id, 1, amount_of, 4, }, {, art_id, 2, amount_of, 8, }, {, art_id, 3, amount_of, 1, }, contain_articles, [, {, art_id, 1, amount_of, 4, }, {, art_id, 2, amount_of, 5, }, {, art_id, 4, amount_of, 1, }]
+        Product name: [Dining Chair, Dinning Table]
+        Inventory: [1, 12, 2, 17, 3, 2, 4, 1]
+
+
+
+        File PRODUCTS_JSON = new File("/home/rano/code/ranokuhl/JavaPrograms/Warehouse/libs/products.json");
+
+        JsonFactory factory = new JsonFactory();
+
+        JsonParser parser = factory.createParser(PRODUCTS_JSON);
+
+        List<String> containArticles = new LinkedList<>();
+        List<String> productName = new LinkedList<>();
+
+        while ((parser.nextToken() != JsonToken.END_OBJECT)) {
+
+            JsonToken token;
+
+            while ((token = parser.nextToken()) != JsonToken.END_ARRAY) {  // products
+
+                String fieldName = parser.getCurrentName();
+                // Dining Chair
+                // Get dining chair and dining table
+                if ("name".equals(fieldName)) {
+
+                    parser.nextToken();
+                    productName.add(parser.getText());
+                    while (parser.nextToken() != JsonToken.END_ARRAY) {  // contain_articles
+
+                        containArticles.add(parser.getText());
+
+                        if ("contain_articles".equals(fieldName)) {
+                            parser.nextToken();
+                            productName.add(parser.getText());
+                        }
+                    }
+
+                }
+            }
+
+            System.out.println("Contain Articles: " + containArticles);
+            System.out.println("Product name: " + productName);
+
+            File INVENTORY_JSON = new File("/home/rano/code/ranokuhl/JavaPrograms/Warehouse/libs/inventory.json");
+
+            JsonParser parser2 = factory.createParser(INVENTORY_JSON);
+
+            List<String> inventory = new LinkedList<>();
+
+            JsonToken token2 = parser2.nextToken();
+            token2 = parser2.nextToken();
+
+            if (token2 == JsonToken.FIELD_NAME && "inventory".equals(parser2.getCurrentName())) {
+
+                token2 = parser2.nextToken(); // // Read left bracket i.e. [
+                // Loop to print array elements until right bracket i.e ]
+                while (token2 != JsonToken.END_ARRAY) {
+                    token2 = parser2.nextToken();
+
+                    if ("art_id".equals(parser2.getCurrentName()) && token2 == JsonToken.VALUE_STRING) {
+                        inventory.add(parser2.getText());
+                    }
+
+                    if ("stock".equals(parser2.getCurrentName()) && token2 == JsonToken.VALUE_STRING) {
+                        inventory.add(parser2.getText());
+                    }
+
+/*                if (token == JsonToken.VALUE_STRING) {
+//                    System.out.print(parser2.getText() + ", ");
+                inventory.add(parser2.getText());
+            }*/
+/*
+                }
+            }
+            System.out.println("Inventory: " + inventory);
+        }
+
+    }}
+
+
+
+/*
+
+
+
+        List<String> inventory = new LinkedList<>();
+
+
+        while(parser2.nextToken() != JsonToken.END_OBJECT) {
+
+            String fieldName2 = parser2.getCurrentName();
+
+            if("inventory".equals(fieldName2)) {
+
+
+                if(parser2.nextToken() == JsonToken.START_ARRAY) {
+
+                    while(parser2.nextToken() != JsonToken.END_ARRAY) {
+                        inventory.add(parser2.getText());
+                    }
+                }
+            }
+        }
+
+
+
+
+
+
+        System.out.println(inventory);
+
+*/
+
+
+
+
+
+//
+//
+//            JsonToken token;
+//            while((token = parser.nextToken()) != null) {
+//
+//                if(token.isScalarValue()) {
+//
+//                    String currentName  = parser.getCurrentName();
+//
+//                        if (currentName != null) {
+//                            String text = parser.getText();
+//                            System.out.printf("%s: %s%n", currentName, text);
+//                        }
+//
+//                }
+//
+//                System.out.println(token);
+//                System.out.println(parser.getText());
+//
+//
+//            }
+//        }
+//
+//
+//    }
+//}
+//
+/*
+
+        2019/09/01 - results
 
         ObjectMapper mapper = new ObjectMapper();
         mapper.setDefaultPropertyInclusion(
@@ -42,8 +196,9 @@ public class ProductRepository {
 
 //            String prettyProducts = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(myInventoryList);
 //            System.out.println("Pretty String Merge List:\n" + prettyProducts);
+*/
 
-        }
+
 
 
 
@@ -257,7 +412,7 @@ public class ProductRepository {
         //String prettyStaff1 = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(product);
 
         //System.out.println(prettyStaff1);
-    }
+
 
 /*    public static String[] GetStringArray(ArrayList<String> arr)
     {
@@ -274,7 +429,7 @@ public class ProductRepository {
 
         return str;
     }*/
-}
+
 
 
 
