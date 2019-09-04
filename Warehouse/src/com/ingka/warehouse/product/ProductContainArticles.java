@@ -1,26 +1,28 @@
 package com.ingka.warehouse.product;
 
+import com.fasterxml.jackson.annotation.JsonGetter;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.ingka.warehouse.article.ArticleInventoryRepository;
+import flexjson.JSON;
 
-@JsonIgnoreProperties(ignoreUnknown = true)
-@JsonInclude(JsonInclude.Include.NON_NULL)
+import java.util.List;
+
 public class ProductContainArticles {
 
-    @JsonProperty("art_id") private String artId;
-    @JsonProperty("amount_of") private String amountOf;
+    private String artId;
+    private String amountOf;
 
     public ProductContainArticles() {
     }
 
-    public static ProductContainArticles of(String artId, String amountOf) {
-        ProductContainArticles containArticles = new ProductContainArticles();
-        containArticles.setArtId(artId);
-        containArticles.setAmountOf(amountOf);
-        return containArticles;
+    public ProductContainArticles of(String artId, String amountOf) {
+        ProductContainArticles productContainArticles = new ProductContainArticles();
+        productContainArticles.setArtId(artId);
+        productContainArticles.setAmountOf(amountOf);
+        return productContainArticles;
     }
-
 
     @JsonProperty("art_id")
     public String getArtId() {
@@ -44,7 +46,9 @@ public class ProductContainArticles {
 
     @Override
     public String toString() {
-        return "{\"art_id\": " + artId + ", " +
-                "\"amount_of\": " + amountOf + "}";
+        return "Article number: " + artId + ", " +
+                "Amount: " + amountOf;
+/*        return "{\"art_id\": " + artId + ", " +
+                "\"amount_of\": " + amountOf + "}";*/
     }
 }

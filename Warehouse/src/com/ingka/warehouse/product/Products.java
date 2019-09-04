@@ -1,15 +1,14 @@
 package com.ingka.warehouse.product;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.annotation.JsonMerge;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
+import java.util.ArrayList;
 import java.util.List;
 
 // @JsonIgnoreProperties(ignoreUnknown = true)
-@JsonIgnoreProperties(ignoreUnknown = true)
 public class Products {
 
-    @JsonMerge
     private List<Product> products;
 
     public Products() {
@@ -19,13 +18,14 @@ public class Products {
         Products products1 = new Products();
         products1.setProducts(products);
         return products1;
-        // this.products = products;
     }
 
+    @JsonProperty("products")
     public List<Product> getProducts() {
         return products;
     }
 
+    @JsonProperty("products")
     public void setProducts(List<Product> products) {
         this.products = products;
     }
@@ -34,4 +34,5 @@ public class Products {
     public String toString() {
         return "products: " + products;
     }
+
 }

@@ -10,8 +10,8 @@ public class ArticleInventoryRepository {
 
     public static void main(String[] args) throws IOException {
 
-         File jsonFile = new File("c:\\app-win\\json\\inventory.json");
-//        File jsonFile = new File("/home/rano/code/ranokuhl/JavaPrograms/Warehouse/libs/inventory.json");
+//         File jsonFile = new File("c:\\app-win\\json\\inventory.json");
+        File jsonFile = new File("/home/rano/code/ranokuhl/JavaPrograms/Warehouse/libs/inventory.json");
 
         ObjectMapper objectMapper = new ObjectMapper();
 
