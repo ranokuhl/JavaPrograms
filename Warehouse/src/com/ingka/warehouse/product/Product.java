@@ -4,25 +4,25 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonMerge;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import flexjson.JSON;
 
 import java.util.List;
 
-@JsonIgnoreProperties(ignoreUnknown = true)
-@JsonInclude(JsonInclude.Include.NON_NULL)
+// is Articles.java
+
 public class Product {
 
     private String name;
-    @JsonMerge
-    private List<ProductContainArticles> containArticles;
+    private List<ProductContainArticles> productContainArticles;
 
     public Product() {
 
     }
 
-    public static Product of(String name, List<ProductContainArticles> containArticles) {
+    public static Product of(String name, List<ProductContainArticles> productContainArticles) {
         Product product = new Product();
         product.setName(name);
-        product.setContainArticles(containArticles);
+        product.setContainArticles(productContainArticles);
         return product;
     }
 
@@ -33,7 +33,7 @@ public class Product {
 
     @JsonProperty("contain_articles")
     public List<ProductContainArticles> getContainArticles() {
-        return containArticles;
+        return productContainArticles;
     }
 
     @JsonProperty("name")
@@ -42,52 +42,13 @@ public class Product {
     }
 
     @JsonProperty("contain_articles")
-    public void setContainArticles(List<ProductContainArticles> containArticles) {
-        this.containArticles = containArticles;
+    public void setContainArticles(List<ProductContainArticles> productContainArticles) {
+        this.productContainArticles = productContainArticles;
     }
 
     @Override
     public String toString() {
-        return "\"name\": " + name + ", " +
-                "\"contain_articles\": " + containArticles;
+        return "\"Product name\": " + name + ", " +
+                "\"Contains articles\": " + productContainArticles;
     }
-
-    /*
-    private List <ContainArticles> containArticles;
-    private String name;
-
-
-    public Product() {
-
-    }
-
-    public static Product of(List containArticles, String name) {
-        Product product = new Product();
-        product.name = name;
-        product.containArticles = containArticles;
-        return product;
-    }
-
-    @JsonProperty("contain_articles")
-    public List getContainArticles() {
-        return containArticles;
-    }
-
-    public void setContainArticles(List containArticles) {
-        this.containArticles = containArticles;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    @Override
-    public String toString() {
-        return "\"name\": " + name +
-                "\"contain_articles\": " + containArticles;
-    }*/
 }

@@ -23,6 +23,7 @@ public class Article {
         return artId;
     }
 
+    @JsonProperty("amount_of")
     public String getAmount_of() {
         return amount_of;
     }
@@ -32,6 +33,7 @@ public class Article {
         this.artId = artId;
     }
 
+    @JsonProperty("amount_of")
     public void setAmount_of(String amount_of) {
         this.amount_of = amount_of;
     }

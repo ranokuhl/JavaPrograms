@@ -4,8 +4,6 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-@JsonInclude(JsonInclude.Include.NON_NULL)
-@JsonIgnoreProperties(ignoreUnknown = true)
 public class ProductInventoryArticles {
 
     private String artId;
@@ -25,10 +23,12 @@ public class ProductInventoryArticles {
         return artId;
     }
 
+    @JsonProperty("name")
     public String getName() {
         return name;
     }
 
+    @JsonProperty("stock")
     public String getStock() {
         return stock;
     }
@@ -38,10 +38,12 @@ public class ProductInventoryArticles {
         this.artId = artId;
     }
 
+    @JsonProperty("name")
     public void setName(String name) {
         this.name = name;
     }
 
+    @JsonProperty("stock")
     public void setStock(String stock) {
         this.stock = stock;
     }

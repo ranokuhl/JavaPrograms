@@ -2,16 +2,72 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9237b0ca-141b-4903-be38-5284d76e52c5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../ArrayChallenge/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ArrayListChallenge/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/flexjson_2_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/flexjson_2_1_javadoc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/flexjson_2_1_sources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/productsUpdated.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/ingka/warehouse/article/Articles.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jsonb/jsonb.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ArrayChallenge/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ArrayChallenge/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ArrayListChallenge/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ArrayListChallenge/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/products.json" beforeDir="false" afterPath="$PROJECT_DIR$/libs/products.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Warehouse1/com/ingka/warehouse/engine/RemoveProduct.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Warehouse1/com/ingka/warehouse/engine/RemoveProduct.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Warehouse1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse1.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/array.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/array2.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/arrayjoin.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/staff.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/user.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Warehouse1/META-INF/Warehouse1.kotlin_module" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Warehouse1/META-INF/Warehouse1.kotlin_module" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Warehouse1/com/ingka/warehouse/article/Article.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Warehouse1/com/ingka/warehouse/article/Article.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Warehouse1/com/ingka/warehouse/article/ArticleInventory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Warehouse1/com/ingka/warehouse/article/ArticleInventory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Warehouse1/com/ingka/warehouse/article/ArticleInventoryRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Warehouse1/com/ingka/warehouse/article/ArticleInventoryRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Warehouse1/com/ingka/warehouse/article/ReadingJson.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Warehouse1/com/ingka/warehouse/article/Testing.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Warehouse1/com/ingka/warehouse/engine/Product.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Warehouse1/com/ingka/warehouse/engine/RemoveProduct.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Warehouse1/com/ingka/warehouse/product/InventoryArticles.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Warehouse1/com/ingka/warehouse/product/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Warehouse1/com/ingka/warehouse/product/Product.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Warehouse1/com/ingka/warehouse/product/ProductContainArticles.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Warehouse1/com/ingka/warehouse/product/ProductContainArticles.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Warehouse1/com/ingka/warehouse/product/ProductInventoryArticles.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Warehouse1/com/ingka/warehouse/product/ProductInventoryArticles.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Warehouse1/com/ingka/warehouse/product/ProductRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Warehouse1/com/ingka/warehouse/product/ProductRepository.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Warehouse1/com/ingka/warehouse/product/Products.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Warehouse1/com/ingka/warehouse/product/Products.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/ingka/warehouse/engine/RemoveProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ingka/warehouse/engine/RemoveProduct.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Warehouse1/com/ingka/warehouse/testing/Address.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Warehouse1/com/ingka/warehouse/testing/ArrayRepository$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Warehouse1/com/ingka/warehouse/testing/ArrayRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Warehouse1/com/ingka/warehouse/testing/Car.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Warehouse1/com/ingka/warehouse/testing/CarRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Warehouse1/com/ingka/warehouse/testing/Employee.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Warehouse1/com/ingka/warehouse/testing/ExampleMain.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Warehouse1/com/ingka/warehouse/testing/Person.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Warehouse1/com/ingka/warehouse/testing/StaffModel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Warehouse1/com/ingka/warehouse/testing/StaffRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Warehouse1/com/ingka/warehouse/testing/TreeModel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/ingka/warehouse/WarehouseApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ingka/warehouse/WarehouseApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/ingka/warehouse/article/Article.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ingka/warehouse/article/Article.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/ingka/warehouse/article/ArticleInventory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ingka/warehouse/article/ArticleInventory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/ingka/warehouse/article/ArticleInventoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ingka/warehouse/article/ArticleInventoryRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/ingka/warehouse/article/ReadingJson.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/ingka/warehouse/article/Testing.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/ingka/warehouse/engine/Product.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/ingka/warehouse/engine/RemoveProduct.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/ingka/warehouse/product/InventoryArticles.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/ingka/warehouse/product/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ingka/warehouse/product/Product.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/ingka/warehouse/product/ProductContainArticles.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ingka/warehouse/product/ProductContainArticles.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/ingka/warehouse/product/ProductInventoryArticles.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ingka/warehouse/product/ProductInventoryArticles.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/ingka/warehouse/product/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ingka/warehouse/product/ProductRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/ingka/warehouse/product/Products.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ingka/warehouse/product/Products.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/ingka/warehouse/testing/Address.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/ingka/warehouse/testing/ArrayRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/ingka/warehouse/testing/Car.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/ingka/warehouse/testing/CarRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/ingka/warehouse/testing/Employee.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/ingka/warehouse/testing/ExampleMain.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/ingka/warehouse/testing/Person.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/ingka/warehouse/testing/StaffModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/ingka/warehouse/testing/StaffRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/ingka/warehouse/testing/TreeModel.java" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,16 +85,6 @@
       </list>
     </option>
   </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>pretty</find>
-      <find>prett</find>
-      <find>art_id</find>
-    </findStrings>
-    <replaceStrings>
-      <replace>artId</replace>
-    </replaceStrings>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
@@ -47,9 +93,10 @@
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/Databases-Implement-Artist-Query-Source-code" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ArrayChallenge" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -60,12 +107,12 @@
       <recent name="com.ingka.warehouse.product" />
       <recent name="com.ingka.warehouse.example" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/libs" />
-    </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.ingka.warehouse.product" />
       <recent name="com.ingka.warehouse.article" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/libs" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -80,7 +127,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.ProductRepository">
+  <component name="RunManager" selected="Application.WarehouseApp">
+    <configuration name="ArticleInventoryRepository" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.ingka.warehouse.article.ArticleInventoryRepository" />
+      <module name="Warehouse1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ingka.warehouse.testing.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ProductRepository" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.ingka.warehouse.product.ProductRepository" />
       <module name="Warehouse1" />
@@ -95,20 +155,7 @@
       </method>
     </configuration>
     <configuration name="ReadingJson" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.ingka.warehouse.article.ReadingJson" />
-      <module name="Warehouse1" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.ingka.warehouse.article.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RemoveProduct" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.ingka.warehouse.engine.RemoveProduct" />
+      <option name="MAIN_CLASS_NAME" value="com.ingka.warehouse.testing.ReadingJson" />
       <module name="Warehouse1" />
       <extension name="coverage">
         <pattern>
@@ -120,12 +167,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Testing" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.ingka.warehouse.article.Testing" />
+    <configuration name="TestFlexJson" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.ingka.warehouse.testing.TestFlexJson" />
       <module name="Warehouse1" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.ingka.warehouse.article.*" />
+          <option name="PATTERN" value="com.ingka.warehouse.testing.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -148,18 +195,18 @@
     </configuration>
     <list>
       <item itemvalue="Application.ProductRepository" />
-      <item itemvalue="Application.RemoveProduct" />
-      <item itemvalue="Application.ReadingJson" />
-      <item itemvalue="Application.Testing" />
       <item itemvalue="Application.WarehouseApp" />
+      <item itemvalue="Application.TestFlexJson" />
+      <item itemvalue="Application.ArticleInventoryRepository" />
+      <item itemvalue="Application.ReadingJson" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ProductRepository" />
-        <item itemvalue="Application.RemoveProduct" />
         <item itemvalue="Application.WarehouseApp" />
-        <item itemvalue="Application.Testing" />
+        <item itemvalue="Application.ProductRepository" />
+        <item itemvalue="Application.ArticleInventoryRepository" />
         <item itemvalue="Application.ReadingJson" />
+        <item itemvalue="Application.TestFlexJson" />
       </list>
     </recent_temporary>
   </component>
@@ -202,6 +249,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="masterDetails">
     <states>
