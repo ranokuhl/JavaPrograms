@@ -6,16 +6,19 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="dasboot" />
         <module name="das-boot" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="das-boot" target="11" />
+      <module name="dasboot" target="11" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="das-boot" options="-parameters" />
+      <module name="dasboot" options="-parameters" />
     </option>
   </component>
 </project>
