@@ -1,13 +1,13 @@
-package com.ranokuhl.warehouserest;
+package com.ranokuhl.warehouse;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class WarehouserestApplication {
+public class WarehouseApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(WarehouserestApplication.class, args);
+		SpringApplication.run(WarehouseApplication.class, args);
 	}
 
 }
