@@ -1,46 +1,22 @@
 package com.ranokuhl.warehouse.models;
 
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
+import lombok.Getter;
+import lombok.Setter;
 
-@Document
+@Getter
+@Setter
 public class Articles {
 
-    @Id
-    private long artId;
+    private String art_id;
     private String name;
-    private long stock;
+    private String stock;
 
     public Articles() {
     }
 
-    public Articles(long artId, String name, long stock) {
-        this.artId = artId;
+    public Articles(String art_id, String name, String stock) {
+        this.art_id = art_id;
         this.name = name;
-        this.stock = stock;
-    }
-
-    public long getArtId() {
-        return artId;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public long getStock() {
-        return stock;
-    }
-
-    public void setArtId(long artId) {
-        this.artId = artId;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setStock(long stock) {
         this.stock = stock;
     }
 }
