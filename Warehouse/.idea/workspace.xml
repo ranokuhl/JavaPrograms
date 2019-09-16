@@ -2,72 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9237b0ca-141b-4903-be38-5284d76e52c5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../ArrayChallenge/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ArrayListChallenge/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/flexjson_2_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/flexjson_2_1_javadoc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/flexjson_2_1_sources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libs/productsUpdated.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/ingka/warehouse/article/Articles.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jsonb/jsonb.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ArrayChallenge/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ArrayChallenge/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ArrayListChallenge/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ArrayListChallenge/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Warehouserest/src/main/java/com/ranokuhl/warehouse/models/Parts.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Warehouse1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Warehouse1.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/array.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/array2.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/arrayjoin.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/staff.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/user.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Warehouse1/META-INF/Warehouse1.kotlin_module" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Warehouse1/META-INF/Warehouse1.kotlin_module" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Warehouse1/com/ingka/warehouse/article/Article.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Warehouse1/com/ingka/warehouse/article/Article.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Warehouse1/com/ingka/warehouse/article/ArticleInventory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Warehouse1/com/ingka/warehouse/article/ArticleInventory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Warehouse1/com/ingka/warehouse/article/ArticleInventoryRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Warehouse1/com/ingka/warehouse/article/ArticleInventoryRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Warehouse1/com/ingka/warehouse/article/ReadingJson.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Warehouse1/com/ingka/warehouse/article/Testing.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Warehouse1/com/ingka/warehouse/engine/Product.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Warehouse1/com/ingka/warehouse/engine/RemoveProduct.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Warehouse1/com/ingka/warehouse/product/InventoryArticles.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Warehouse1/com/ingka/warehouse/product/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Warehouse1/com/ingka/warehouse/product/Product.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Warehouse1/com/ingka/warehouse/product/ProductContainArticles.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Warehouse1/com/ingka/warehouse/product/ProductContainArticles.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Warehouse1/com/ingka/warehouse/product/ProductInventoryArticles.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Warehouse1/com/ingka/warehouse/product/ProductInventoryArticles.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Warehouse1/com/ingka/warehouse/product/ProductRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Warehouse1/com/ingka/warehouse/product/ProductRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Warehouse1/com/ingka/warehouse/product/Products.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Warehouse1/com/ingka/warehouse/product/Products.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Warehouse1/com/ingka/warehouse/testing/Address.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Warehouse1/com/ingka/warehouse/testing/ArrayRepository$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Warehouse1/com/ingka/warehouse/testing/ArrayRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Warehouse1/com/ingka/warehouse/testing/Car.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Warehouse1/com/ingka/warehouse/testing/CarRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Warehouse1/com/ingka/warehouse/testing/Employee.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Warehouse1/com/ingka/warehouse/testing/ExampleMain.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Warehouse1/com/ingka/warehouse/testing/Person.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Warehouse1/com/ingka/warehouse/testing/StaffModel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Warehouse1/com/ingka/warehouse/testing/StaffRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Warehouse1/com/ingka/warehouse/testing/TreeModel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/ingka/warehouse/WarehouseApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ingka/warehouse/WarehouseApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/ingka/warehouse/article/Article.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ingka/warehouse/article/Article.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/ingka/warehouse/article/ArticleInventory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ingka/warehouse/article/ArticleInventory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/ingka/warehouse/article/ArticleInventoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ingka/warehouse/article/ArticleInventoryRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/ingka/warehouse/article/ReadingJson.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/ingka/warehouse/article/Testing.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/ingka/warehouse/engine/Product.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/ingka/warehouse/engine/RemoveProduct.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/ingka/warehouse/product/InventoryArticles.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/ingka/warehouse/product/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ingka/warehouse/product/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/ingka/warehouse/product/ProductContainArticles.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ingka/warehouse/product/ProductContainArticles.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/ingka/warehouse/product/ProductInventoryArticles.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ingka/warehouse/product/ProductInventoryArticles.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/ingka/warehouse/product/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ingka/warehouse/product/ProductRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/ingka/warehouse/product/Products.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ingka/warehouse/product/Products.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/ingka/warehouse/testing/Address.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/ingka/warehouse/testing/ArrayRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/ingka/warehouse/testing/Car.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/ingka/warehouse/testing/CarRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/ingka/warehouse/testing/Employee.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/ingka/warehouse/testing/ExampleMain.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/ingka/warehouse/testing/Person.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/ingka/warehouse/testing/StaffModel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/ingka/warehouse/testing/StaffRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/ingka/warehouse/testing/TreeModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Warehouse1/com/ingka/warehouse/article/Article.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Warehouse1/com/ingka/warehouse/article/ArticleInventory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Warehouse1/com/ingka/warehouse/article/ArticleInventoryRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Warehouse1/com/ingka/warehouse/product/Product.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Warehouse1/com/ingka/warehouse/product/ProductContainArticles.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Warehouse1/com/ingka/warehouse/product/ProductInventory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Warehouse1/com/ingka/warehouse/product/ProductInventoryArticles.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Warehouse1/com/ingka/warehouse/product/ProductRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Warehouse1/com/ingka/warehouse/product/Products.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Warehouserest/src/main/java/com/ranokuhl/warehouse/models/Inventory.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Warehouserest/src/main/java/com/ranokuhl/warehouse/models/Inventory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Warehouserest/src/main/java/com/ranokuhl/warehouse/models/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Warehouserest/src/main/java/com/ranokuhl/warehouse/models/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Warehouserest/src/main/java/com/ranokuhl/warehouse/models/Products.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Warehouserest/src/main/java/com/ranokuhl/warehouse/models/Products.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Warehouserest/src/main/java/com/ranokuhl/warehouse/repositories/ProductsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Warehouserest/src/main/java/com/ranokuhl/warehouse/repositories/ProductsRepository.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -77,6 +26,28 @@
   </component>
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/ingka/warehouse/article/Articles.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/ingka/warehouse/WarehouseApp.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="19" column="4" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="127" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -88,15 +59,59 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
+  </component>
   <component name="ProjectId" id="1Q8Pk07GdFQRuiuImm9Un76nBa3" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Warehouse" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Warehouse" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Warehouse" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Warehouse" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Warehouse" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Warehouse" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="warehouse" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Warehouse" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Warehouse" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="warehouse" type="462c0819:PsiDirectoryNode" />
+              <item name="article" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+    </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ArrayChallenge" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -223,12 +238,50 @@
     </task>
     <servers />
   </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Image Layers" order="0" />
+      <window_info id="Designer" order="1" />
+      <window_info id="UI Designer" order="2" />
+      <window_info id="Capture Tool" order="3" />
+      <window_info id="Favorites" order="4" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.1684435" />
+      <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" order="0" weight="0.3294509" />
+      <window_info anchor="bottom" id="Terminal" order="1" />
+      <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="3" />
+      <window_info anchor="bottom" id="Find" order="4" />
+      <window_info anchor="bottom" id="Debug" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="8" />
+      <window_info anchor="right" id="Palette" order="0" />
+      <window_info anchor="right" id="Capture Analysis" order="1" />
+      <window_info anchor="right" id="Theme Preview" order="2" />
+      <window_info anchor="right" id="Palette&#9;" order="3" />
+      <window_info anchor="right" id="Maven" order="4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="5" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="6" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="7" weight="0.25" />
+      <window_info active="true" anchor="right" id="Run" order="8" side_tool="true" visible="true" weight="0.3294509" />
+      <window_info anchor="right" id="Messages" order="9" weight="0.2857143" />
+    </layout>
+  </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
             <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
               <option name="COLUMN_ORDER" />
             </State>
           </value>
@@ -252,6 +305,22 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/com/ingka/warehouse/article/Articles.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/ingka/warehouse/WarehouseApp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="4" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="127" />
+        </state>
+      </provider>
+    </entry>
   </component>
   <component name="masterDetails">
     <states>
