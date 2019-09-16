@@ -5,15 +5,15 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class Contains {
+public class Product {
 
     private String art_id;
     private String amount_of;
 
-    public Contains() {
+    public Product() {
     }
 
-    public Contains(String art_id, String amount_of) {
+    public Product(String art_id, String amount_of) {
         this.art_id = art_id;
         this.amount_of = amount_of;
     }

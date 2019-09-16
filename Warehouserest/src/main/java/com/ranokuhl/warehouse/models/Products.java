@@ -10,12 +10,12 @@ import java.util.List;
 public class Products {
 
     private String name;
-    private List<Article> contain_articles;
+    private List<Product> contain_articles;
 
     public Products() {
     }
 
-    public Products(String name, List<Article> contain_articles) {
+    public Products(String name, List<Product> contain_articles) {
         this.name = name;
         this.contain_articles = contain_articles;
     }
