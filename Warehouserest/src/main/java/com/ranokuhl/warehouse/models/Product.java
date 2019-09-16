@@ -1,20 +1,18 @@
 package com.ranokuhl.warehouse.models;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.List;
+
+@AllArgsConstructor
 @Getter
 @Setter
 public class Product {
 
-    private String art_id;
-    private String amount_of;
 
-    public Product() {
-    }
-
-    public Product(String art_id, String amount_of) {
-        this.art_id = art_id;
-        this.amount_of = amount_of;
-    }
+    private String name;
+    // Refers to Parts class
+    private List<Parts> contain_articles;
 }
