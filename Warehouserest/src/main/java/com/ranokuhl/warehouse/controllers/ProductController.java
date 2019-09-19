@@ -1,8 +1,9 @@
 package com.ranokuhl.warehouse.controllers;
 
 import com.ranokuhl.warehouse.models.Products;
-import com.ranokuhl.warehouse.services.ProductService;
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.data.mongodb.core.MongoTemplate;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -10,16 +11,31 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping(value = "/api/v1")
 public class ProductController {
 
-    private ProductService productService;
+    private MongoTemplate mongoTemplate;
 
-    public ProductController(ProductService productService) {
-        this.productService = productService;
+    public ProductController(MongoTemplate mongoTemplate) {
+        this.mongoTemplate = mongoTemplate;
     }
 
-    @GetMapping("/products")
-    public Iterable<Products> list() {
-        return productService.list();
+    @PostMapping("/products")
+    public void insert(@RequestBody Products products) {
+        this.mongoTemplate.insert(products);
     }
+
+//    private ProductService productService;
+//
+//    public ProductController(ProductService productService) {
+//        this.productService = productService;
+//    }
+//
+//    @GetMapping("/products")
+//    public Iterable<Products> list() {
+//        return productService.list();
+//    }
+//
+//
+
+
 
 
     //    public List<Products> getAllProducts() {
