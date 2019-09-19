@@ -1,6 +1,5 @@
 package com.ranokuhl.warehouse.services;
 
-
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -21,9 +20,9 @@ import java.util.List;
 @Service
 public class DataSetReaderProducts implements CommandLineRunner {
 
-
     private MongoTemplate mongoTemplate;
 
+    // Constructor
     public DataSetReaderProducts(MongoTemplate mongoTemplate) {
         this.mongoTemplate = mongoTemplate;
     }
@@ -34,57 +33,34 @@ public class DataSetReaderProducts implements CommandLineRunner {
         this.mongoTemplate.dropCollection(Products.class);
 
         // Add data from json file in mongodb
-
         try {
 
             ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
 
             ObjectMapper mapper = new ObjectMapper();
             mapper.configure(DeserializationFeature.ACCEPT_SINGLE_VALUE_AS_ARRAY, true);
-            TypeReference<List<Products>> typeReference = new TypeReference<List<Products>>(){};
+            TypeReference<List<Products>> typeReference = new TypeReference<List<Products>>() {
+            };
 
             InputStream inputStream = classLoader.getResourceAsStream("json/products.json");
 
-            InputStreamReader isR = new InputStreamReader(inputStream);
-            BufferedReader reader = new BufferedReader(isR);
-            StringBuffer buffer = new StringBuffer();
+            InputStreamReader inputStreamReader = new InputStreamReader(inputStream);
+            BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
+            StringBuffer stringBuffer = new StringBuffer();
 
             String line = "";
-            while( (line = reader.readLine()) != null ){
-                buffer.append(line);
+            while ((line = bufferedReader.readLine()) != null) {
+                stringBuffer.append(line);
             }
 
             MongoClient client = new MongoClient("localhost");
             MongoCollection<Document> collection = client.getDatabase("warehouse").getCollection("products");
-            Document doc = Document.parse(buffer.toString());
+            Document doc = Document.parse(stringBuffer.toString());
             collection.insertOne(doc);
 
-//            List<Document> products = mapper.readValue(inputStream,typeReference);
-//            System.out.println(products);
-
-
-
-
-
-
-
-
-
-
-
-             System.out.println("Products saved!");
-        } catch(IOException e) {
-            System.out.println("Not able to save products: " + e.getMessage());
+            System.out.println("Products loaded!");
+        } catch (IOException e) {
+            System.out.println("Not able to load products: " + e.getMessage());
         }
-
-
-
-
-
-
-
-
-
     }
-
 }
