@@ -1,10 +1,10 @@
 package com.ranokuhl.warehouse.services;
 
-import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.mongodb.MongoClient;
 import com.mongodb.client.MongoCollection;
+import com.ranokuhl.warehouse.models.Inventory;
 import com.ranokuhl.warehouse.models.Products;
 import org.bson.Document;
 import org.springframework.boot.CommandLineRunner;
@@ -15,7 +15,6 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.util.List;
 
 @Service
 public class DataSetReaderProducts implements CommandLineRunner {
@@ -27,10 +26,13 @@ public class DataSetReaderProducts implements CommandLineRunner {
         this.mongoTemplate = mongoTemplate;
     }
 
-    // Dropping the products collection in mongodb
     @Override
     public void run(String... args) throws IOException {
+        // Dropping the products collection in mongodb
         this.mongoTemplate.dropCollection(Products.class);
+
+        // Dropping the inventory collection in mongodb
+        this.mongoTemplate.dropCollection(Inventory.class);
 
         // Add data from json file in mongodb
         try {
@@ -39,24 +41,41 @@ public class DataSetReaderProducts implements CommandLineRunner {
 
             ObjectMapper mapper = new ObjectMapper();
             mapper.configure(DeserializationFeature.ACCEPT_SINGLE_VALUE_AS_ARRAY, true);
-            TypeReference<List<Products>> typeReference = new TypeReference<List<Products>>() {
-            };
 
             InputStream inputStream = classLoader.getResourceAsStream("json/products.json");
+            InputStream inputStreamInventory = classLoader.getResourceAsStream("json/inventory.json");
 
+            // Load Inventory json at startup
+            InputStreamReader inputStreamReaderInventory = new InputStreamReader(inputStreamInventory);
+            BufferedReader bufferedReaderInventory = new BufferedReader(inputStreamReaderInventory);
+            StringBuffer stringBufferInventory = new StringBuffer();
+
+            String line1 = "";
+            while ((line1 = bufferedReaderInventory.readLine()) != null) {
+                stringBufferInventory.append(line1);
+            }
+
+            MongoClient client1 = new MongoClient("localhost");
+            MongoCollection<Document> collectionInventory = client1.getDatabase("warehouse").getCollection("inventory");
+            Document doc1 = Document.parse(stringBufferInventory.toString());
+            collectionInventory.insertOne(doc1);
+
+            System.out.println("Inventory loaded!");
+
+            // Load products Json at startup
             InputStreamReader inputStreamReader = new InputStreamReader(inputStream);
             BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
             StringBuffer stringBuffer = new StringBuffer();
 
-            String line = "";
-            while ((line = bufferedReader.readLine()) != null) {
-                stringBuffer.append(line);
+            String line2 = "";
+            while ((line2 = bufferedReader.readLine()) != null) {
+                stringBuffer.append(line2);
             }
 
-            MongoClient client = new MongoClient("localhost");
-            MongoCollection<Document> collection = client.getDatabase("warehouse").getCollection("products");
-            Document doc = Document.parse(stringBuffer.toString());
-            collection.insertOne(doc);
+            MongoClient client2 = new MongoClient("localhost");
+            MongoCollection<Document> collectionProducts = client2.getDatabase("warehouse").getCollection("products");
+            Document doc2 = Document.parse(stringBuffer.toString());
+            collectionProducts.insertOne(doc2);
 
             System.out.println("Products loaded!");
         } catch (IOException e) {
