@@ -70,7 +70,6 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
-
 	</dependencies>
 
 	<build>
@@ -79,6 +78,7 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+
 			<plugin>
 				<groupId>com.mysema.maven</groupId>
 				<artifactId>apt-maven-plugin</artifactId>
@@ -99,7 +99,8 @@
 						<configuration>
 							<outputDirectory>target/generated-sources/annotations</outputDirectory>
 							<processor>
-								org.springframework.data.mongodb.repository.support.MongoAnnotationProcessor
+								org.springframework.data.mongodb.repository.support.MongoAnnotationProcessor,
+								lombok.launch.AnnotationProcessorHider$AnnotationProcessor
 							</processor>
 							<logOnlyOnError>true</logOnlyOnError>
 						</configuration>
