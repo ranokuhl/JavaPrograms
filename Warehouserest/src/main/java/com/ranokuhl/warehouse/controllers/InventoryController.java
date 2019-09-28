@@ -14,14 +14,14 @@ import java.util.List;
 @RequestMapping(value = "/api/v1")
 public class InventoryController {
 
-        @Autowired
-        private InventoryRepository inventoryRepository;
+    @Autowired
+    private InventoryRepository inventoryRepository;
 
 
-        // Methods for articles
-        @RequestMapping(value = "/inventory", method = RequestMethod.GET)
-        public List<Inventory> getAllInventory() {
-                return inventoryRepository.findAll();
-        }
+    // Methods for articles
+    @RequestMapping(value = "/inventory", method = RequestMethod.GET)
+    public List<Inventory> getAllInventory() {
+        return inventoryRepository.findAll();
+    }
 }
 

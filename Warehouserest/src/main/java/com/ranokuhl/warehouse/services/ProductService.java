@@ -1,7 +1,7 @@
 package com.ranokuhl.warehouse.services;
 
 import com.ranokuhl.warehouse.models.Products;
-import com.ranokuhl.warehouse.repositories.ProductRepository;
+import com.ranokuhl.warehouse.repositories.ProductsRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -13,10 +13,10 @@ import java.util.List;
 public class ProductService {
 
     @Autowired
-    private ProductRepository productRepository;
+    private ProductsRepository productsRepository;
 
     public Iterable<Products> list() {
-        return productRepository.findAll();
+        return productsRepository.findAll();
     }
 
     public Iterable<Products> save(List<Products> products) {
@@ -24,6 +24,6 @@ public class ProductService {
     }
 
 //    public Iterable<Product> save(List<Product> products) {
-//        return productRepository.save(products);
+//        return productsRepository.save(products);
 //    }
 }
