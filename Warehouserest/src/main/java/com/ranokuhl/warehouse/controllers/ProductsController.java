@@ -2,15 +2,15 @@ package com.ranokuhl.warehouse.controllers;
 
 import com.ranokuhl.warehouse.models.Products;
 import com.ranokuhl.warehouse.repositories.ProductsRepository;
-import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@Service
 @RestController
 @RequestMapping(value = "/api/v1")
-@AllArgsConstructor
 public class ProductsController {
 
 //    @Autowired
@@ -34,6 +34,8 @@ public class ProductsController {
     public void update(@RequestBody Products product) {
         this.productsRepository.save(product);
     }
+
+
 
     // starting advanced filters
 

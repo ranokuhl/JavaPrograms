@@ -78,6 +78,16 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<executable>true</executable>
+				</configuration>
+				<executions>
+					<execution>
+						<goals>
+							<goal>repackage</goal>
+						</goals>
+					</execution>
+				</executions>
 			</plugin>
 			<plugin>
 				<groupId>com.mysema.maven</groupId>
@@ -87,7 +97,7 @@
 					<dependency>
 						<groupId>com.querydsl</groupId>
 						<artifactId>querydsl-apt</artifactId>
-						<version>4.2.1</version>
+						<version>${querydsl.version}</version>
 					</dependency>
 				</dependencies>
 				<executions>
@@ -98,9 +108,7 @@
 						</goals>
 						<configuration>
 							<outputDirectory>target/generated-sources/annotations</outputDirectory>
-							<processor>
-								org.springframework.data.mongodb.repository.support.MongoAnnotationProcessor
-							</processor>
+							<processor>org.springframework.data.mongodb.repository.support.MongoAnnotationProcessor</processor>
 							<logOnlyOnError>true</logOnlyOnError>
 						</configuration>
 					</execution>
