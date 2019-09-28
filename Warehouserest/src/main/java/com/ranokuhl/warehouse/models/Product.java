@@ -12,7 +12,7 @@ import java.util.List;
 @AllArgsConstructor
 @Getter
 @Setter
-public class Product {
+class Product {
 
     private String name;
     // Refers to Parts class

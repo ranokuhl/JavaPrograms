@@ -10,11 +10,11 @@ import org.springframework.data.mongodb.core.mapping.Field;
 
 import java.util.List;
 
-@Document(collection = "products")
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
 @Setter
+@Document(collection = "products")
 public class Products {
 
     @Id

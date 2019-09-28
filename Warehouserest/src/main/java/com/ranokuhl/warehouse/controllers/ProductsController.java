@@ -1,30 +1,45 @@
 package com.ranokuhl.warehouse.controllers;
 
 import com.ranokuhl.warehouse.models.Products;
-import org.springframework.data.mongodb.core.MongoTemplate;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import com.ranokuhl.warehouse.repositories.ProductsRepository;
+import lombok.AllArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping(value = "/api/v1")
-public class ProductController {
+@AllArgsConstructor
+public class ProductsController {
 
-    private MongoTemplate mongoTemplate;
+//    @Autowired
+//    private MongoTemplate mongoTemplate;
 
-    public ProductController(MongoTemplate mongoTemplate) {
-        this.mongoTemplate = mongoTemplate;
+    @Autowired
+    private ProductsRepository productsRepository;
+
+    @GetMapping("/products/all")
+    public List<Products> getAll() {
+        List<Products> products = this.productsRepository.findAll();
+        return products;
     }
 
-    @PostMapping("/products")
-    public void insert(@RequestBody Products products) {
-        this.mongoTemplate.insert(products);
+    @PutMapping
+    public void insert(@RequestBody Products product) {
+        this.productsRepository.insert(product);
     }
+
+    @PostMapping
+    public void update(@RequestBody Products product) {
+        this.productsRepository.save(product);
+    }
+
+    // starting advanced filters
 
 //    private ProductService productService;
 //
-//    public ProductController(ProductService productService) {
+//    public ProductsController(ProductService productService) {
 //        this.productService = productService;
 //    }
 //

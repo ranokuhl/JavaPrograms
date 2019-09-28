@@ -9,7 +9,7 @@ import lombok.Setter;
 @AllArgsConstructor
 @Getter
 @Setter
-public class Parts {
+class Parts {
 
     private String art_id;
     private String amount_of;

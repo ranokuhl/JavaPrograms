@@ -9,14 +9,14 @@ import com.ranokuhl.warehouse.models.Products;
 import org.bson.Document;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.data.mongodb.core.MongoTemplate;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 
-@Service
+@Component
 public class DataSetReaderProducts implements CommandLineRunner {
 
     private MongoTemplate mongoTemplate;
@@ -27,7 +27,7 @@ public class DataSetReaderProducts implements CommandLineRunner {
     }
 
     @Override
-    public void run(String... args) throws IOException {
+    public void run(String... args) {
         // Dropping the products collection in mongodb
         this.mongoTemplate.dropCollection(Products.class);
 
