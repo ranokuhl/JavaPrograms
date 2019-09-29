@@ -1,6 +1,8 @@
 package com.ranokuhl.warehouse.controllers;
 
+import com.querydsl.core.types.dsl.BooleanExpression;
 import com.ranokuhl.warehouse.models.Products;
+import com.ranokuhl.warehouse.models.QProducts;
 import com.ranokuhl.warehouse.repositories.ProductsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -34,6 +36,31 @@ public class ProductsController {
     public void update(@RequestBody Products product) {
         this.productsRepository.save(product);
     }
+
+    // Query DSL starting here
+    @GetMapping("/products/{name}")
+    public List<Products> getByName(@PathVariable("name") String name) {
+
+        // Create a new query class QProduct
+        QProducts qProducts = new QProducts("name");
+
+        // use the query class and run the filter
+        BooleanExpression filterByName = qProducts.products.any().name.eq(name);
+
+//      BooleanExpression filterByName = qProducts.products.get(1).name.eq(name);
+
+        // then pass the filter into the findAll() method
+        List<Products> products = (List<Products>) this.productsRepository.findAll(filterByName);
+
+        return products;
+    }
+
+//    public List<Products> getName(){
+//
+//        QProducts qProducts = new QProducts("products");
+//
+//        BooleanExpression filterByName = qProducts.products.get(0).name.eq()
+//    }
 
 
 
