@@ -6,8 +6,6 @@ import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
-
 @Service
 @AllArgsConstructor
 public class ProductService {
@@ -15,13 +13,14 @@ public class ProductService {
     @Autowired
     private ProductsRepository productsRepository;
 
+    // Connects to @GetMapping("/products/all") in ProductsController
     public Iterable<Products> list() {
         return productsRepository.findAll();
     }
 
-    public Iterable<Products> save(List<Products> products) {
-        return products;
-    }
+//    public Iterable<Products> save(List<Products> products) {
+//        return products;
+//    }
 
 //    public Iterable<Product> save(List<Product> products) {
 //        return productsRepository.save(products);
