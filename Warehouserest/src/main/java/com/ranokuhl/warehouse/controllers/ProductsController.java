@@ -4,13 +4,11 @@ import com.querydsl.core.types.dsl.BooleanExpression;
 import com.ranokuhl.warehouse.models.Products;
 import com.ranokuhl.warehouse.models.QProducts;
 import com.ranokuhl.warehouse.repositories.ProductsRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+import com.ranokuhl.warehouse.services.ProductService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@Service
 @RestController
 @RequestMapping(value = "/api/v1")
 public class ProductsController {
@@ -18,13 +16,24 @@ public class ProductsController {
 //    @Autowired
 //    private MongoTemplate mongoTemplate;
 
-    @Autowired
     private ProductsRepository productsRepository;
 
+    private ProductService productService;
+
+    public ProductsController(ProductsRepository productsRepository, ProductService productService) {
+        this.productsRepository = productsRepository;
+        this.productService = productService;
+    }
+//    @GetMapping("/products/all")
+//    public List<Products> getAll() {
+//        List<Products> products = this.productsRepository.findAll();
+//        return products;
+//    }
+
+    // have put the business logic in Service class
     @GetMapping("/products/all")
-    public List<Products> getAll() {
-        List<Products> products = this.productsRepository.findAll();
-        return products;
+    public Iterable<Products> list() {
+        return productService.list();
     }
 
     @PutMapping
@@ -36,6 +45,14 @@ public class ProductsController {
     public void update(@RequestBody Products product) {
         this.productsRepository.save(product);
     }
+
+//    public Collection<Products> findDiningChairArticles() {
+//        // Build query
+//        QProducts query = new QProducts("query");
+//        SimplePath<Parts> amountOfList = query.products.any().contain_articles.any();        // Pass query to findAll() method
+//        List<Products> products = (List<Products>) this.productsRepository.findAll(amountOfList);
+//        return products;
+//    }
 
     // Query DSL starting here
     @GetMapping("/products/{name}")
@@ -72,7 +89,7 @@ public class ProductsController {
 //        this.productService = productService;
 //    }
 //
-//    @GetMapping("/products")
+//    @GetMapping("/products/all")
 //    public Iterable<Products> list() {
 //        return productService.list();
 //    }

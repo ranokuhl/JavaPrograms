@@ -40,7 +40,8 @@ public class DataSetReaderProducts implements CommandLineRunner {
             ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
 
             ObjectMapper mapper = new ObjectMapper();
-            mapper.configure(DeserializationFeature.ACCEPT_SINGLE_VALUE_AS_ARRAY, true);
+            mapper.configure(
+                    DeserializationFeature.ACCEPT_SINGLE_VALUE_AS_ARRAY, true);
 
             InputStream inputStream = classLoader.getResourceAsStream("json/products.json");
             InputStream inputStreamInventory = classLoader.getResourceAsStream("json/inventory.json");
@@ -62,7 +63,7 @@ public class DataSetReaderProducts implements CommandLineRunner {
 
             System.out.println("Inventory loaded!");
 
-            // Load products Json at startup
+            // Load Products Json at startup
             InputStreamReader inputStreamReader = new InputStreamReader(inputStream);
             BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
             StringBuffer stringBuffer = new StringBuffer();
