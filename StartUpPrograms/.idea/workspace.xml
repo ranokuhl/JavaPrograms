@@ -7,13 +7,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a5bb2315-a65e-4a42-9fb3-1d8ea00f1f0a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../PrimeCalculator/PrimeCalculator.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../RomanianCoderExamples" beforeDir="false" afterPath="$PROJECT_DIR$/../RomanianCoderExamples" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/StartUpPrograms_jar/StartUpPrograms.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/StartUpPrograms_jar/StartUpPrograms.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/StartUpPrograms/StartUpPrograms.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/StartUpPrograms/StartUpPrograms.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/StartUpPrograms.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/StartUpPrograms.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TeenNumberChecker/src/TeenNumberChecker.java" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
