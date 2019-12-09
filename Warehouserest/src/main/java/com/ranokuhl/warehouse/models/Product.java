@@ -14,6 +14,7 @@ import java.util.List;
 public class Product {
 
     @Indexed
+    private String productid;
     private String name;
     // Refers to Parts class
     @Field("contain_articles")
