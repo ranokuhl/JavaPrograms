@@ -9,7 +9,7 @@ import java.util.List;
 public class Speaker {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long speaker_id;
     private String first_name;
     private String last_name;
@@ -22,9 +22,9 @@ public class Speaker {
     private byte[] speaker_photo;
 
     @ManyToMany(mappedBy = "speakers")
-    private List<Session> sessionList;
-    public Speaker() {
+    private List<Session> sessions;
 
+    public Speaker() {
     }
 
     public byte[] getSpeaker_photo() {
@@ -35,12 +35,12 @@ public class Speaker {
         this.speaker_photo = speaker_photo;
     }
 
-    public List<Session> getSessionList() {
-        return sessionList;
+    public List<Session> getSessions() {
+        return sessions;
     }
 
-    public void setSessionList(List<Session> sessionList) {
-        this.sessionList = sessionList;
+    public void setSessions(List<Session> sessions) {
+        this.sessions = sessions;
     }
 
     public Long getSpeaker_id() {

@@ -7,17 +7,11 @@ import java.util.List;
 public class Session {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long session_id;
     private String session_name;
     private String session_description;
     private Integer session_length;
-
-    private List<Speaker> speakerList;
-
-    public Session() {
-
-    }
 
     @ManyToMany
     @JoinTable(
@@ -25,12 +19,18 @@ public class Session {
             joinColumns = @JoinColumn(name = "session_id"),
             inverseJoinColumns = @JoinColumn(name = "speaker_id")
     )
-    public List<Speaker> getSpeakerList() {
-        return speakerList;
+    private List<Speaker> speakers;
+
+    public Session() {
+
     }
 
-    public void setSpeakerList(List<Speaker> speakerList) {
-        this.speakerList = speakerList;
+    public List<Speaker> getSpeakers() {
+        return speakers;
+    }
+
+    public void setSpeakers(List<Speaker> speakers) {
+        this.speakers = speakers;
     }
 
     public Long getSession_id() {
