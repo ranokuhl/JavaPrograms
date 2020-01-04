@@ -15,6 +15,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.util.List;
 
 @Component
 public class DataSetReaderProducts implements CommandLineRunner {
@@ -43,10 +44,10 @@ public class DataSetReaderProducts implements CommandLineRunner {
             mapper.configure(
                     DeserializationFeature.ACCEPT_SINGLE_VALUE_AS_ARRAY, true);
 
-            InputStream inputStream = classLoader.getResourceAsStream("json/products.json");
+            InputStream inputStreamProducts = classLoader.getResourceAsStream("json/products.json");
             InputStream inputStreamInventory = classLoader.getResourceAsStream("json/inventory.json");
 
-            // Load Inventory json at startup
+/*            // Load Inventory json at startup
             InputStreamReader inputStreamReaderInventory = new InputStreamReader(inputStreamInventory);
             BufferedReader bufferedReaderInventory = new BufferedReader(inputStreamReaderInventory);
             StringBuffer stringBufferInventory = new StringBuffer();
@@ -61,21 +62,21 @@ public class DataSetReaderProducts implements CommandLineRunner {
             Document doc1 = Document.parse(stringBufferInventory.toString());
             collectionInventory.insertOne(doc1);
 
-            System.out.println("Inventory loaded!");
+            System.out.println("Inventory loaded!");*/
 
             // Load Products Json at startup
-            InputStreamReader inputStreamReader = new InputStreamReader(inputStream);
+            InputStreamReader inputStreamReader = new InputStreamReader(inputStreamProducts);
             BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
-            StringBuffer stringBuffer = new StringBuffer();
+            StringBuffer stringBufferProducts = new StringBuffer();
 
             String line2 = "";
             while ((line2 = bufferedReader.readLine()) != null) {
-                stringBuffer.append(line2);
+                stringBufferProducts.append(line2);
             }
 
             MongoClient client2 = new MongoClient("localhost");
             MongoCollection<Document> collectionProducts = client2.getDatabase("warehouse").getCollection("products");
-            Document doc2 = Document.parse(stringBuffer.toString());
+            Document doc2 = Document.parse(stringBufferProducts.toString());
             collectionProducts.insertOne(doc2);
 
             System.out.println("Products loaded!");

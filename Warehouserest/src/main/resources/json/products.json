@@ -1,6 +1,5 @@
+
 {
-  "products": [{
-    "productid": 1,
     "name": "Dining Chair",
     "contain_articles": [{
       "art_id": "1",
@@ -17,7 +16,6 @@
     ]
   },
     {
-      "productid": 2,
       "name": "Dinning Table",
       "contain_articles": [{
         "art_id": "1",
@@ -33,5 +31,3 @@
         }
       ]
     }
-  ]
-}
