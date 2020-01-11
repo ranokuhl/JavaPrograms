@@ -15,6 +15,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
 import java.util.List;
 
 @Component
@@ -74,10 +75,23 @@ public class DataSetReaderProducts implements CommandLineRunner {
                 stringBufferProducts.append(line2);
             }
 
+
+//            MongoClient client2 = new MongoClient("localhost");
+//            MongoTemplate mongoTemplate = new MongoTemplate(client2, "warehouse");
+//            System.out.println("StringBufferProducts:" + stringBufferProducts);
+
+//            mongoTemplate.insert(stringBufferProducts);
             MongoClient client2 = new MongoClient("localhost");
             MongoCollection<Document> collectionProducts = client2.getDatabase("warehouse").getCollection("products");
-            Document doc2 = Document.parse(stringBufferProducts.toString());
-            collectionProducts.insertOne(doc2);
+//            Document doc2 = Document.parse(stringBufferProducts.toString());
+
+            // Create List to add the documents in the array
+            List<Document> docs2 = new ArrayList<>();
+
+
+
+
+            collectionProducts.insertMany(docs2);
 
             System.out.println("Products loaded!");
         } catch (IOException e) {
