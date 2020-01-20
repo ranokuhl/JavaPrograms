@@ -1,7 +1,8 @@
 [
-{
+  {
     "name": "Dining Chair",
-    "contain_articles": [{
+    "contain_articles": [
+      {
       "art_id": "1",
       "amount_of": "4"
     },
@@ -17,7 +18,8 @@
   },
     {
       "name": "Dinning Table",
-      "contain_articles": [{
+      "contain_articles": [
+        {
         "art_id": "1",
         "amount_of": "4"
       },

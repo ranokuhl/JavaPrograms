@@ -20,7 +20,7 @@ public class WarehouseApplication {
 //			mapper.configure(DeserializationFeature.ACCEPT_SINGLE_VALUE_AS_ARRAY, true);
 //			TypeReference<List<Products>> typeReference = new TypeReference<List<Products>>(){};
 //
-//			InputStream inputStream = classLoader.getResourceAsStream("json/products.json");
+//			InputStream inputStream = classLoader.getResourceAsStream("json/product.json");
 //
 //			try {
 //				List<Products> products = mapper.readValue(inputStream,typeReference);

@@ -1,22 +1,19 @@
 package com.ranokuhl.warehouse.services;
 
-import com.fasterxml.jackson.databind.DeserializationFeature;
+
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.mongodb.MongoClient;
 import com.mongodb.client.MongoCollection;
-import com.ranokuhl.warehouse.models.Inventory;
-import com.ranokuhl.warehouse.models.Products;
+import com.ranokuhl.warehouse.models.Product;
 import org.bson.Document;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.stereotype.Component;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.util.ArrayList;
+import java.io.*;
+import java.util.Arrays;
 import java.util.List;
+
 
 @Component
 public class DataSetReaderProducts implements CommandLineRunner {
@@ -31,10 +28,10 @@ public class DataSetReaderProducts implements CommandLineRunner {
     @Override
     public void run(String... args) {
         // Dropping the products collection in mongodb
-        this.mongoTemplate.dropCollection(Products.class);
+        this.mongoTemplate.dropCollection(Product.class);
 
         // Dropping the inventory collection in mongodb
-        this.mongoTemplate.dropCollection(Inventory.class);
+//        this.mongoTemplate.dropCollection(Inventory.class);
 
         // Add data from json file in mongodb
         try {
@@ -42,12 +39,43 @@ public class DataSetReaderProducts implements CommandLineRunner {
             ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
 
             ObjectMapper mapper = new ObjectMapper();
+
+            InputStream inputStreamProducts = classLoader.getResourceAsStream("json/product.json");
+
+            Product[] product = mapper.readValue(inputStreamProducts, Product[].class);
+//            Parts[] parts;
+
+            MongoClient client1 = new MongoClient("localhost");
+            MongoCollection<Document> collectionProduct = client1.getDatabase("warehouse").getCollection("product");
+
+            for (Product value : product) {
+
+                String productName = value.getProductName();
+//                System.out.println(productName);
+                System.out.println(value);
+//                collectionProduct.insertOne(value);
+
+
+
+
+            }
+
+            System.out.println(Arrays.toString(product));
+
+
+//            Document doc1 = Document.parse(Arrays.toString(product));
+//            collectionProduct.insertMany((List<? extends Document>) doc1);
+
+
+/*
+
             mapper.configure(
                     DeserializationFeature.ACCEPT_SINGLE_VALUE_AS_ARRAY, true);
 
-            InputStream inputStreamProducts = classLoader.getResourceAsStream("json/products.json");
+            InputStream inputStreamProducts = classLoader.getResourceAsStream("json/product.json");
             InputStream inputStreamInventory = classLoader.getResourceAsStream("json/inventory.json");
 
+*/
 /*            // Load Inventory json at startup
             InputStreamReader inputStreamReaderInventory = new InputStreamReader(inputStreamInventory);
             BufferedReader bufferedReaderInventory = new BufferedReader(inputStreamReaderInventory);
@@ -63,7 +91,8 @@ public class DataSetReaderProducts implements CommandLineRunner {
             Document doc1 = Document.parse(stringBufferInventory.toString());
             collectionInventory.insertOne(doc1);
 
-            System.out.println("Inventory loaded!");*/
+            System.out.println("Inventory loaded!");*//*
+
 
             // Load Products Json at startup
             InputStreamReader inputStreamReader = new InputStreamReader(inputStreamProducts);
@@ -73,6 +102,7 @@ public class DataSetReaderProducts implements CommandLineRunner {
             String line2 = "";
             while ((line2 = bufferedReader.readLine()) != null) {
                 stringBufferProducts.append(line2);
+                System.out.println("StringBufferProducts: " + stringBufferProducts);
             }
 
 
@@ -86,12 +116,16 @@ public class DataSetReaderProducts implements CommandLineRunner {
 //            Document doc2 = Document.parse(stringBufferProducts.toString());
 
             // Create List to add the documents in the array
-            List<Document> docs2 = new ArrayList<>();
+            List<Document> docs2 = new ArrayList<Document>(stringBufferProducts.toString());
+            Document addProducts = (Document) stringBufferProducts;
+
+            docs2.add(stringBufferProducts);
 
 
 
 
-            collectionProducts.insertMany(docs2);
+//            collectionProducts.insertMany(docs2);
+*/
 
             System.out.println("Products loaded!");
         } catch (IOException e) {
