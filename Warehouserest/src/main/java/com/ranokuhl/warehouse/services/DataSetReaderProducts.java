@@ -1,18 +1,14 @@
 package com.ranokuhl.warehouse.services;
 
-
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.mongodb.MongoClient;
-import com.mongodb.client.MongoCollection;
 import com.ranokuhl.warehouse.models.Product;
-import org.bson.Document;
+import dev.morphia.Datastore;
+import dev.morphia.Morphia;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.stereotype.Component;
-
 import java.io.*;
-import java.util.Arrays;
-import java.util.List;
 
 
 @Component
@@ -31,7 +27,6 @@ public class DataSetReaderProducts implements CommandLineRunner {
         this.mongoTemplate.dropCollection(Product.class);
 
         // Dropping the inventory collection in mongodb
-//        this.mongoTemplate.dropCollection(Inventory.class);
 
         // Add data from json file in mongodb
         try {
@@ -46,21 +41,30 @@ public class DataSetReaderProducts implements CommandLineRunner {
 //            Parts[] parts;
 
             MongoClient client1 = new MongoClient("localhost");
-            MongoCollection<Document> collectionProduct = client1.getDatabase("warehouse").getCollection("product");
 
-            for (Product value : product) {
+            Morphia morphia = new Morphia();
+            morphia.map(Product.class);
 
-                String productName = value.getProductName();
-//                System.out.println(productName);
-                System.out.println(value);
-//                collectionProduct.insertOne(value);
+            Datastore datastore = morphia.createDatastore(client1, "warehouse");
+//            datastore.ensureIndexes();
 
-
-
-
+            for (Product valueProducts : product) {
+                datastore.save(valueProducts);
             }
 
-            System.out.println(Arrays.toString(product));
+
+
+//            MongoDatabase mongoDatabase = client1.getDatabase("warehouse");
+//            MongoCollection<Document> collectionProduct = mongoDatabase.getCollection("product");
+
+
+//            MongoCollection<Document> collectionProduct = client1.getDatabase("warehouse").getCollection("product");
+//            Map<String, Object > documents = new HashMap<>();
+
+
+
+
+//            System.out.println(Arrays.toString(product));
 
 
 //            Document doc1 = Document.parse(Arrays.toString(product));
@@ -128,7 +132,7 @@ public class DataSetReaderProducts implements CommandLineRunner {
 */
 
             System.out.println("Products loaded!");
-        } catch (IOException e) {
+        } catch (Exception e) {
             System.out.println("Not able to load products: " + e.getMessage());
         }
     }
