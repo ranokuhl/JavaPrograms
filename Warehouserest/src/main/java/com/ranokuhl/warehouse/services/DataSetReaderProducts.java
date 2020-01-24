@@ -1,10 +1,15 @@
 package com.ranokuhl.warehouse.services;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.mongodb.BasicDBObject;
 import com.mongodb.MongoClient;
+import com.mongodb.client.MongoCollection;
+import com.mongodb.client.MongoDatabase;
 import com.ranokuhl.warehouse.models.Product;
 import dev.morphia.Datastore;
 import dev.morphia.Morphia;
+import org.bson.Document;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.stereotype.Component;
@@ -14,17 +19,8 @@ import java.io.*;
 @Component
 public class DataSetReaderProducts implements CommandLineRunner {
 
-    private MongoTemplate mongoTemplate;
-
-    // Constructor
-    public DataSetReaderProducts(MongoTemplate mongoTemplate) {
-        this.mongoTemplate = mongoTemplate;
-    }
-
     @Override
     public void run(String... args) {
-        // Dropping the products collection in mongodb
-        this.mongoTemplate.dropCollection(Product.class);
 
         // Dropping the inventory collection in mongodb
 
@@ -41,7 +37,16 @@ public class DataSetReaderProducts implements CommandLineRunner {
 //            Parts[] parts;
 
             MongoClient client1 = new MongoClient("localhost");
+            client1.dropDatabase("warehouse");
+//            MongoDatabase mongoDatabase = client1.getDatabase("warehouse");
+//            MongoCollection<Document> collectionProduct = mongoDatabase.getCollection("product");
+//
+//            for (Product valueProduct: product) {
+//                collectionProduct.insertOne(valueProduct);
+//            }
 
+//          ## Start Morphia part
+//
             Morphia morphia = new Morphia();
             morphia.map(Product.class);
 
@@ -51,6 +56,10 @@ public class DataSetReaderProducts implements CommandLineRunner {
             for (Product valueProducts : product) {
                 datastore.save(valueProducts);
             }
+
+//          ## End Morphia Part
+
+
 
 
 
@@ -70,8 +79,8 @@ public class DataSetReaderProducts implements CommandLineRunner {
 //            Document doc1 = Document.parse(Arrays.toString(product));
 //            collectionProduct.insertMany((List<? extends Document>) doc1);
 
-
 /*
+
 
             mapper.configure(
                     DeserializationFeature.ACCEPT_SINGLE_VALUE_AS_ARRAY, true);
@@ -79,8 +88,9 @@ public class DataSetReaderProducts implements CommandLineRunner {
             InputStream inputStreamProducts = classLoader.getResourceAsStream("json/product.json");
             InputStream inputStreamInventory = classLoader.getResourceAsStream("json/inventory.json");
 
-*/
-/*            // Load Inventory json at startup
+
+
+            // Load Inventory json at startup
             InputStreamReader inputStreamReaderInventory = new InputStreamReader(inputStreamInventory);
             BufferedReader bufferedReaderInventory = new BufferedReader(inputStreamReaderInventory);
             StringBuffer stringBufferInventory = new StringBuffer();
@@ -95,7 +105,7 @@ public class DataSetReaderProducts implements CommandLineRunner {
             Document doc1 = Document.parse(stringBufferInventory.toString());
             collectionInventory.insertOne(doc1);
 
-            System.out.println("Inventory loaded!");*//*
+            System.out.println("Inventory loaded!");
 
 
             // Load Products Json at startup
@@ -129,6 +139,8 @@ public class DataSetReaderProducts implements CommandLineRunner {
 
 
 //            collectionProducts.insertMany(docs2);
+
+
 */
 
             System.out.println("Products loaded!");
