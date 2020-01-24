@@ -3,13 +3,13 @@ package com.ranokuhl.warehouse.models;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import dev.morphia.annotations.Entity;
 import dev.morphia.annotations.Id;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 import org.bson.types.ObjectId;
-import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
-import org.springframework.data.mongodb.core.mapping.Field;
 
-import java.util.Arrays;
 import java.util.List;
 
 @Data
@@ -22,14 +22,22 @@ public class Product {
 
     @Id
     private ObjectId id;
-//    @JsonProperty("name")
-    private String name;
-//    @JsonProperty("contain_articles")
-    private List<Parts> contain_articles;
-//    private Parts[] parts;
+    @JsonProperty("name")
+    private String productName;
+    @JsonProperty("contain_articles")
+    private List<Parts> parts;
+    //private Parts[] parts;
 
     public Product() {
     }
 
+    @Override
+    public String toString() {
+        return "Product{" +
+                "id=" + id +
+                ", productName='" + productName + '\'' +
+                ", parts=" + parts +
+                '}';
+    }
 }
 

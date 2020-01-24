@@ -1,31 +1,31 @@
 package com.ranokuhl.warehouse.models;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
-import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 @AllArgsConstructor
 @Setter
 @Getter
-@JsonIgnoreProperties(ignoreUnknown = true)
-public class Parts {
+@Document(value = "Inventory")
+public class Inventory {
 
-    @Id
     @JsonProperty("art_id")
     private String articleId;
-    @JsonProperty("amount_of")
-    private String parts;
+    @JsonProperty("name")
+    private String articleName;
+    private String stock;
 
-    public Parts() { }
+    public Inventory() {}
 
     @Override
     public String toString() {
-        return "Parts{" +
+        return "Inventory{" +
                 "articleId='" + articleId + '\'' +
-                ", parts='" + parts + '\'' +
+                ", articleName='" + articleName + '\'' +
+                ", stock='" + stock + '\'' +
                 '}';
     }
 }
