@@ -1,19 +1,19 @@
 package com.ranokuhl.warehouse.services;
 
+import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.mongodb.BasicDBObject;
 import com.mongodb.MongoClient;
 import com.mongodb.client.MongoCollection;
-import com.mongodb.client.MongoDatabase;
 import com.ranokuhl.warehouse.models.Product;
 import dev.morphia.Datastore;
 import dev.morphia.Morphia;
 import org.bson.Document;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
-import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.stereotype.Component;
-import java.io.*;
+
+import java.io.BufferedReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 
 
 @Component
@@ -32,23 +32,21 @@ public class DataSetReaderProducts implements CommandLineRunner {
             ObjectMapper mapper = new ObjectMapper();
 
             InputStream inputStreamProducts = classLoader.getResourceAsStream("json/product.json");
+//            InputStream inputStreamInventory = classLoader.getResourceAsStream(("json/inventory.json"));
 
             Product[] product = mapper.readValue(inputStreamProducts, Product[].class);
+//            Inventory[] inventory = mapper.readValue(inputStreamInventory, Inventory[].class);
+
 //            Parts[] parts;
 
             MongoClient client1 = new MongoClient("localhost");
             client1.dropDatabase("warehouse");
-//            MongoDatabase mongoDatabase = client1.getDatabase("warehouse");
-//            MongoCollection<Document> collectionProduct = mongoDatabase.getCollection("product");
-//
-//            for (Product valueProduct: product) {
-//                collectionProduct.insertOne(valueProduct);
-//            }
 
 //          ## Start Morphia part
 //
             Morphia morphia = new Morphia();
             morphia.map(Product.class);
+//            morphia.map(Inventory.class);
 
             Datastore datastore = morphia.createDatastore(client1, "warehouse");
 //            datastore.ensureIndexes();
@@ -56,6 +54,9 @@ public class DataSetReaderProducts implements CommandLineRunner {
             for (Product valueProducts : product) {
                 datastore.save(valueProducts);
             }
+//            for (Inventory valueInventory : inventory) {
+//                datastore.save(valueInventory);
+//            }
 
 //          ## End Morphia Part
 
@@ -79,16 +80,13 @@ public class DataSetReaderProducts implements CommandLineRunner {
 //            Document doc1 = Document.parse(Arrays.toString(product));
 //            collectionProduct.insertMany((List<? extends Document>) doc1);
 
-/*
+
 
 
             mapper.configure(
                     DeserializationFeature.ACCEPT_SINGLE_VALUE_AS_ARRAY, true);
 
-            InputStream inputStreamProducts = classLoader.getResourceAsStream("json/product.json");
             InputStream inputStreamInventory = classLoader.getResourceAsStream("json/inventory.json");
-
-
 
             // Load Inventory json at startup
             InputStreamReader inputStreamReaderInventory = new InputStreamReader(inputStreamInventory);
@@ -100,7 +98,7 @@ public class DataSetReaderProducts implements CommandLineRunner {
                 stringBufferInventory.append(line1);
             }
 
-            MongoClient client1 = new MongoClient("localhost");
+//            MongoClient client1 = new MongoClient("localhost");
             MongoCollection<Document> collectionInventory = client1.getDatabase("warehouse").getCollection("inventory");
             Document doc1 = Document.parse(stringBufferInventory.toString());
             collectionInventory.insertOne(doc1);
@@ -118,7 +116,7 @@ public class DataSetReaderProducts implements CommandLineRunner {
                 stringBufferProducts.append(line2);
                 System.out.println("StringBufferProducts: " + stringBufferProducts);
             }
-
+/*
 
 //            MongoClient client2 = new MongoClient("localhost");
 //            MongoTemplate mongoTemplate = new MongoTemplate(client2, "warehouse");
