@@ -23,9 +23,10 @@ public class Product {
     @Id
     private ObjectId id;
     @JsonProperty("name")
-    private String productName;
+    private String name;
     @JsonProperty("contain_articles")
-    private List<Parts> parts;
+    private Parts[] parts;
+//    private List<Parts> parts;
     //private Parts[] parts;
 
     public Product() {
@@ -35,7 +36,7 @@ public class Product {
     public String toString() {
         return "Product{" +
                 "id=" + id +
-                ", productName='" + productName + '\'' +
+                ", productName='" + name + '\'' +
                 ", parts=" + parts +
                 '}';
     }
