@@ -2,19 +2,18 @@ package com.ranokuhl.warehouse.services;
 
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.mongodb.BasicDBObject;
 import com.mongodb.MongoClient;
 import com.mongodb.client.MongoCollection;
-import com.mongodb.client.MongoDatabase;
 import com.ranokuhl.warehouse.models.Product;
 import dev.morphia.Datastore;
 import dev.morphia.Morphia;
 import org.bson.Document;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
-import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.stereotype.Component;
-import java.io.*;
+
+import java.io.BufferedReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 
 
 @Component
@@ -31,6 +30,7 @@ public class DataSetReaderProducts implements CommandLineRunner {
             ObjectMapper mapper = new ObjectMapper();
 
             InputStream inputStreamProducts = classLoader.getResourceAsStream("json/product.json");
+//          InputStream inputStreamInventory = classLoader.getResourceAsStream(("json/inventory.json"));
 
             Product[] product = mapper.readValue(inputStreamProducts, Product[].class);
 
@@ -42,19 +42,19 @@ public class DataSetReaderProducts implements CommandLineRunner {
 //          ## Start Morphia part
             Morphia morphia = new Morphia();
             morphia.map(Product.class);
+//            morphia.map(Inventory.class);
 
             Datastore datastore = morphia.createDatastore(client1, "warehouse");
 
             for (Product valueProducts : product) {
                 datastore.save(valueProducts);
             }
-//          ## End Morphia Part
 
-//          # Start populating mongodb from Inventory json
             mapper.configure(
                     DeserializationFeature.ACCEPT_SINGLE_VALUE_AS_ARRAY, true
             );
 
+//          # Start populating mongodb from Inventory json
             InputStream inputStreamInventory = classLoader.getResourceAsStream("json/inventory.json");
 
             // Load Inventory json at startup
