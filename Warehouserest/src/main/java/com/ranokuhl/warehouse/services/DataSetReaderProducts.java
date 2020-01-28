@@ -36,7 +36,7 @@ public class DataSetReaderProducts implements CommandLineRunner {
 
             MongoClient client1 = new MongoClient("localhost");
 
-            // Dropping the Product collection in mongodb
+            // Dropping the Warehouserest database in mongodb
             client1.dropDatabase("warehouse");
 
 //          ## Start Morphia part
@@ -51,9 +51,9 @@ public class DataSetReaderProducts implements CommandLineRunner {
 //          ## End Morphia Part
 
 //          # Start populating mongodb from Inventory json
-
             mapper.configure(
-                    DeserializationFeature.ACCEPT_SINGLE_VALUE_AS_ARRAY, true);
+                    DeserializationFeature.ACCEPT_SINGLE_VALUE_AS_ARRAY, true
+            );
 
             InputStream inputStreamInventory = classLoader.getResourceAsStream("json/inventory.json");
 
