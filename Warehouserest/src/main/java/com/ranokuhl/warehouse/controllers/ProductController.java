@@ -26,8 +26,8 @@ public class ProductController {
         return productService.findAll();
     }
 
-    @RequestMapping(value = "/product/name/{name}", method = RequestMethod.GET)
-    public List<Product> findByName(@PathVariable("name") String name) {
-        return productRepository.findByName(name);
+    @RequestMapping(value = "/product/name/{productName}", method = RequestMethod.GET)
+    public List<Product> findByName(@PathVariable("productName") String productName) {
+        return productRepository.findByName(productName);
     }
 }

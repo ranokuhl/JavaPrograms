@@ -10,6 +10,7 @@ import lombok.Setter;
 import org.bson.types.ObjectId;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.util.Arrays;
 import java.util.List;
 
 @Data
@@ -32,12 +33,13 @@ public class Product {
     public Product() {
     }
 
+
     @Override
     public String toString() {
         return "Product{" +
                 "id=" + id +
-                ", productName='" + name + '\'' +
-                ", parts=" + parts +
+                ", name='" + name + '\'' +
+                ", parts=" + Arrays.toString(parts) +
                 '}';
     }
 }

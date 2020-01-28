@@ -17,8 +17,5 @@ public class ProductServiceImpl implements ProductService {
         return repository.findAll();
     }
 
-//    public List<Product> findByName() {
-//        return repository.findByName();
-//    }
 
 }
