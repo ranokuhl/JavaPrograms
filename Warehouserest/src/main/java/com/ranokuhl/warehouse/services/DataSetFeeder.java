@@ -10,14 +10,15 @@ import dev.morphia.Morphia;
 import org.bson.Document;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 
 
-@Component
-public class DataSetReaderProducts implements CommandLineRunner {
+@Service
+public class DataSetFeeder implements CommandLineRunner {
 
     @Override
     public void run(String... args) {
