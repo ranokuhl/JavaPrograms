@@ -6,6 +6,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Field;
 
 @AllArgsConstructor
 @Setter
@@ -13,7 +14,6 @@ import org.springframework.data.annotation.Id;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Parts {
 
-    @Id
     @JsonProperty("art_id")
     private String articleId;
     @JsonProperty("amount_of")
@@ -21,11 +21,4 @@ public class Parts {
 
     public Parts() { }
 
-    @Override
-    public String toString() {
-        return "Parts{" +
-                "articleId='" + articleId + '\'' +
-                ", parts='" + parts + '\'' +
-                '}';
-    }
 }

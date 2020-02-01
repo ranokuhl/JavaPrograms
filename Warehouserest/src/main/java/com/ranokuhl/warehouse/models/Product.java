@@ -14,33 +14,24 @@ import java.util.Arrays;
 import java.util.List;
 
 @Data
-@Entity(noClassnameStored = true)
 @AllArgsConstructor
-@Getter
 @Setter
-@Document(value = "Product")
+@Getter
+@Entity(noClassnameStored = true)
+@Document(collection = "Product")
 public class Product {
 
     @Id
-    private ObjectId id;
-    @JsonProperty("name")
+    private String id;
     private String name;
     @JsonProperty("contain_articles")
-    private Parts[] parts;
-//    private List<Parts> parts;
+    private List<Parts> parts;
+    //private Parts[] parts;
     //private Parts[] parts;
 
-    public Product() {
-    }
+    public Product() {}
 
-
-    @Override
-    public String toString() {
-        return "Product{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", parts=" + Arrays.toString(parts) +
-                '}';
-    }
 }
+
+
 
