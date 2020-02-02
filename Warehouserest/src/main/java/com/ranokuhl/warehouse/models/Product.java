@@ -30,7 +30,6 @@ public class Product {
     //private Parts[] parts;
 
     public Product() {}
-
 }
 
 

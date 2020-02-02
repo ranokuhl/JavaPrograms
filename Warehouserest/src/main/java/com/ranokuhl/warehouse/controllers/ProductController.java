@@ -47,11 +47,19 @@ public class ProductController {
         return productRepository.findById(id).orElse(null);
     }
 
-    // ## Methods with Mongotemplate
-    @PostMapping(value = "/product/template")
+    // Delete product
+    @DeleteMapping("/product/delete/{id}")
+    public void deleteProduct(@PathVariable("id") String id) {
+        productRepository.deleteById(id);
+    }
+
+    // ##### Methods with MongoTemplate ####
+    @PostMapping(value = "/product/add")
     public void addNewProduct(@RequestBody Product product) {
         productService.addNewProduct(product);
     }
+
+
 //    @GetMapping("/products")
 //    public Collection<Product> getAllProductsWithMongoTemplate() {
 //        return productService.getAllProductsWithMongoTemplate();
