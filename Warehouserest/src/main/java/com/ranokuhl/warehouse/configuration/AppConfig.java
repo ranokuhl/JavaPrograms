@@ -1,5 +1,6 @@
 package com.ranokuhl.warehouse.configuration;
 
+import com.mongodb.Mongo;
 import com.mongodb.MongoClient;
 import com.ranokuhl.warehouse.repositories.ProductRepository;
 import com.ranokuhl.warehouse.services.ProductService;
@@ -14,6 +15,16 @@ import org.springframework.data.mongodb.core.MongoTemplate;
 @Configuration
 @ComponentScan({"com.ranokuhl"})
 public class AppConfig {
+
+    @Bean
+    public MongoClient mongoClient() {
+        return new MongoClient("localhost");
+    }
+
+    @Bean
+    public MongoTemplate mongoTemplate() {
+        return new MongoTemplate(mongoClient(), "warehouse");
+    }
 
 /*   @Bean(name = "productService")
     @Scope(value= BeanDefinition.SCOPE_SINGLETON)
