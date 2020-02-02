@@ -3,18 +3,13 @@ package com.ranokuhl.warehouse.services;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.mongodb.MongoClient;
-import com.mongodb.client.MongoCollection;
+import com.ranokuhl.warehouse.models.Inventory;
 import com.ranokuhl.warehouse.models.Product;
 import dev.morphia.Datastore;
 import dev.morphia.Morphia;
-import org.bson.Document;
 import org.springframework.boot.CommandLineRunner;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
-
-import java.io.BufferedReader;
 import java.io.InputStream;
-import java.io.InputStreamReader;
 
 
 @Service
@@ -30,10 +25,15 @@ public class DataSetFeeder implements CommandLineRunner {
 
             ObjectMapper mapper = new ObjectMapper();
 
+            final ObjectMapper configure = mapper.configure(
+                    DeserializationFeature.ACCEPT_SINGLE_VALUE_AS_ARRAY, true
+            );
+
             InputStream inputStreamProducts = classLoader.getResourceAsStream("json/product.json");
-//          InputStream inputStreamInventory = classLoader.getResourceAsStream(("json/inventory.json"));
+            InputStream inputStreamInventory = classLoader.getResourceAsStream("json/inventory.json");
 
             Product[] product = mapper.readValue(inputStreamProducts, Product[].class);
+            Inventory[] inventory = mapper.readValue(inputStreamInventory, Inventory[].class);
 
             MongoClient client1 = new MongoClient("localhost");
 
@@ -43,18 +43,21 @@ public class DataSetFeeder implements CommandLineRunner {
 //          ## Start Morphia part
             Morphia morphia = new Morphia();
             morphia.map(Product.class);
-//            morphia.map(Inventory.class);
+            morphia.map(Inventory.class);
 
             Datastore datastore = morphia.createDatastore(client1, "warehouse");
 
-            for (Product valueProducts : product) {
+           for (Product valueProducts : product) {
                 datastore.save(valueProducts);
             }
 
-            mapper.configure(
-                    DeserializationFeature.ACCEPT_SINGLE_VALUE_AS_ARRAY, true
-            );
+           for (Inventory inventories : inventory) {
+               datastore.save(inventories);
+           }
 
+
+
+/*
 //          # Start populating mongodb from Inventory json
             InputStream inputStreamInventory = classLoader.getResourceAsStream("json/inventory.json");
 
@@ -71,7 +74,7 @@ public class DataSetFeeder implements CommandLineRunner {
 
             MongoCollection<Document> collectionInventory = client1.getDatabase("warehouse").getCollection("inventory");
             Document doc1 = Document.parse(stringBufferInventory.toString());
-            collectionInventory.insertOne(doc1);
+            collectionInventory.insertOne(doc1);*/
 
             System.out.println("Inventory loaded!");
             System.out.println("Products loaded!");
