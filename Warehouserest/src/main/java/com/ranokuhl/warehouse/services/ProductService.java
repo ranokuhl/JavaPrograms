@@ -8,8 +8,9 @@ import java.util.List;
 
 @Service("productService")
 public interface ProductService {
+    void addNewProduct(Product product);
 //    List<Product> findAll();
-    Collection<Product> getAllProductsWithMongoTemplate();
+//    Collection<Product> getAllProductsWithMongoTemplate();
 
 
 }
