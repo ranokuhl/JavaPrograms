@@ -17,7 +17,7 @@ public class Parts {
     @JsonProperty("art_id")
     private String articleId;
     @JsonProperty("amount_of")
-    private String parts;
+    private String amount;
 
     public Parts() { }
 
