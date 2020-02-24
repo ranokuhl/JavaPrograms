@@ -7,14 +7,11 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
-import org.bson.types.ObjectId;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import java.util.Arrays;
 import java.util.List;
 
 @Data
-@AllArgsConstructor
 @Setter
 @Getter
 @Entity(noClassnameStored = true)
@@ -29,7 +26,15 @@ public class Product {
     //private Parts[] parts;
     //private Parts[] parts;
 
-    public Product() {}
+
+    public Product() {
+    }
+
+    public Product(String id, String name, List<Parts> parts) {
+        this.id = id;
+        this.name = name;
+        this.parts = parts;
+    }
 }
 
 

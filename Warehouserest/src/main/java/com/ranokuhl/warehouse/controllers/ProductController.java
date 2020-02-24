@@ -1,5 +1,6 @@
 package com.ranokuhl.warehouse.controllers;
 
+import com.ranokuhl.warehouse.models.Parts;
 import com.ranokuhl.warehouse.models.Product;
 import com.ranokuhl.warehouse.repositories.ProductRepository;
 import com.ranokuhl.warehouse.services.ProductService;
@@ -57,6 +58,11 @@ public class ProductController {
     @PostMapping(value = "/product/add")
     public void addNewProduct(@RequestBody Product product) {
         productService.addNewProduct(product);
+    }
+
+    @GetMapping("/product/articleid/{art_id}")
+    public Product findByArticleId(@PathVariable("art_id") String art_id) {
+        return productService.findByArticleId(art_id);
     }
 
 
