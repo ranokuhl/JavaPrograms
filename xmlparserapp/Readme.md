@@ -1,6 +1,8 @@
 # XML Parser demo
 
-Tried to recreat an XML parser that stores data in Mongodb.
+Create an XML parser that stores data in Mongodb.
+
+Followed the guide (see source)
 
 MongoDB version: 4.2.1
 
