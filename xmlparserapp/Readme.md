@@ -1,6 +1,6 @@
 # XML Parser demo
 
-Create an XML parser that stores data in Mongodb.
+Create an XML parser that stores data in Mongodb using Spring Batch.
 
 Followed the guide (see source)
 
