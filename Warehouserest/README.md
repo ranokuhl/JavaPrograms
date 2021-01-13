@@ -8,5 +8,3 @@ How to perform various CRUD activities on the database, which uses MongoDB with 
 
 There is currently no frontend and you can check the endpoint either through the browser at http://localhost:8080/api/v1/products and http://localhost:8080/api/v1/inventory or through Postman.
 
-
-The application is currently in development
